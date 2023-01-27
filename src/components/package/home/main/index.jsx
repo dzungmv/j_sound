@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-
+import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
@@ -10,6 +10,8 @@ import data from '@/components/common/data/data.json';
 import styles from './main.module.scss';
 
 const MainPage = () => {
+    const router = useRouter();
+
     return (
         <main className={styles.wrapperMainPage}>
             <div className='slide'>
@@ -64,7 +66,11 @@ const MainPage = () => {
                 <div className='content-container'>
                     {data.map((item) => {
                         return (
-                            <div key={item.data} className='content-item'>
+                            <div
+                                key={item.data}
+                                className='content-item'
+                                onClick={() => router.push(`/video/${item.id}`)}
+                            >
                                 <img src={item.thumbnail} alt='' />
                                 <div className='content-item-info'>
                                     <div className='content-item-info-song'>

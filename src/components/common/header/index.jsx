@@ -5,6 +5,7 @@ import moment from 'moment/moment';
 import { Cookie } from '@next/font/google';
 
 import styles from './header.module.scss';
+import Link from 'next/link';
 
 const cookie_font = Cookie({
     weight: ['400'],
@@ -23,7 +24,7 @@ const Header = () => {
 
     return (
         <main className={styles.wrapperHeader}>
-            <div className='header-logo header-item'>
+            <Link href={'/'} className='header-logo header-item' passHref>
                 <Image
                     src='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
                     alt='logo'
@@ -32,7 +33,7 @@ const Header = () => {
                     priority
                 />
                 <span className={cookie_font.className}>JSound</span>
-            </div>
+            </Link>
 
             <div className='header-search header-item'>
                 <i className='fa-solid fa-magnifying-glass'></i>
