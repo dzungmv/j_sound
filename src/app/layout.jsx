@@ -1,14 +1,20 @@
-import './globals.css'
+import EmptyLayout from '@/components/layouts/empty';
+import MainLayout from '@/components/layouts/main';
+import './styles/globals.scss';
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>{children}</body>
-    </html>
-  )
+    const Layout = MainLayout || EmptyLayout;
+    return (
+        <html lang='en'>
+            <head>
+                <link
+                    rel='stylesheet'
+                    href='https://site-assets.fontawesome.com/releases/v6.1.2/css/all.css?fbclid=IwAR2Lefv1ZTLJsKEsnl4HGMf5XRZuPqx5yOFnFaOFbVgCiCeU87S0up6ptKU'
+                />
+            </head>
+            <body>
+                <Layout>{children}</Layout>
+            </body>
+        </html>
+    );
 }

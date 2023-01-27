@@ -1,0 +1,33 @@
+.wrapperSidebar {
+    width: 100%;
+
+    :global .sidebar {
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 0 6px;
+            padding: 8px;
+            border-radius: 8px;
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(22, 24, 35, 0.06);
+            }
+
+            &-icon {
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(22, 24, 35, 0.1);
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+    }
+}
