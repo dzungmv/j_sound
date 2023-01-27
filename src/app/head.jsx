@@ -8,7 +8,7 @@ export default function Head() {
             />
             <link
                 rel='icon'
-                href='https://jungjung261.blob.core.windows.net/nextjs-project/portilifo/branch.svg'
+                href='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
             />
         </>
     );

@@ -12,12 +12,14 @@
         background-color: rgb(255, 255, 255);
         border-radius: 16px;
         padding: 8px 8px;
+        height: fit-content;
     }
 
     :global .right {
         width: 75%;
         background-color: rgb(255, 255, 255);
         border-radius: 16px;
+        padding: 16px;
 
         .video-container {
             width: 100%;
@@ -42,6 +44,21 @@
                 height: 100%;
                 border-radius: 20px;
             }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 0;
+        padding-top: 66px;
+
+        :global .left {
+            display: none;
+        }
+
+        :global .right {
+            width: 100%;
+            border-radius: 0;
+            padding: 12px;
         }
     }
 }

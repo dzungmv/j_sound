@@ -17,10 +17,17 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-
-        height: 70%;
+        height: 60%;
+        gap: 0 5px;
         img {
             height: 100%;
+        }
+
+        span {
+            color: var.$primary_color;
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 5px;
         }
     }
 
@@ -76,6 +83,28 @@
             backdrop-filter: blur(4px);
             -webkit-backdrop-filter: blur(4px);
             border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 0 8px;
+        :global .header-logo {
+            width: auto;
+            span {
+                display: none;
+            }
+        }
+
+        :global .header-search {
+            flex: 1;
+        }
+
+        :global .header-option {
+            width: auto;
+
+            span {
+                display: none;
+            }
         }
     }
 }

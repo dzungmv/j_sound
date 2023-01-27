@@ -2,8 +2,14 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import moment from 'moment/moment';
+import { Cookie } from '@next/font/google';
 
 import styles from './header.module.scss';
+
+const cookie_font = Cookie({
+    weight: ['400'],
+    subsets: ['latin'],
+});
 
 const Header = () => {
     const [time, setTime] = useState(Date.now());
@@ -19,13 +25,13 @@ const Header = () => {
         <main className={styles.wrapperHeader}>
             <div className='header-logo header-item'>
                 <Image
-                    src='https://jungjung261.blob.core.windows.net/nextjs-project/portilifo/branch.svg'
+                    src='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
                     alt='logo'
                     width={54}
                     height={54}
                     priority
                 />
-                <span>JSound</span>
+                <span className={cookie_font.className}>JSound</span>
             </div>
 
             <div className='header-search header-item'>

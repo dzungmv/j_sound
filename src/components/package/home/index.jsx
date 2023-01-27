@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Sidebar from '../sidebar';
 import styles from './home.module.scss';
+import MainPage from './main';
 
 const HomPage = () => {
     return (
@@ -10,7 +11,7 @@ const HomPage = () => {
             </div>
 
             <div className='right'>
-                <div
+                {/* <div
                     className='video-container'
                     style={{
                         backgroundImage: `url(
@@ -21,7 +22,9 @@ const HomPage = () => {
                     <div className='video'>
                         <iframe src='https://www.youtube.com/embed/g_4Ql9JmoJ0' />
                     </div>
-                </div>
+                </div> */}
+                {/* Nested component */}
+                <MainPage />
             </div>
         </main>
     );

@@ -1,9 +1,12 @@
 'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import styles from './sidebar.module.scss';
 
 const Sidebar = () => {
+    const pathname = usePathname();
+
     return (
         <div className={styles.wrapperSidebar}>
             <div className='sidebar'>
@@ -12,7 +15,11 @@ const Sidebar = () => {
                         <Link
                             href={item.path}
                             key={item.id}
-                            className='sidebar-item'
+                            className={
+                                pathname === item.path
+                                    ? 'sidebar-item active'
+                                    : 'sidebar-item'
+                            }
                             //     onClick={() => router.push}
                         >
                             <div className='sidebar-item-icon'>
