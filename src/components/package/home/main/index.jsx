@@ -48,7 +48,7 @@ const MainPage = () => {
                     {data_slider.map((item) => {
                         return (
                             <SwiperSlide key={item.id}>
-                                <div className='slide-item'>
+                                <div key={item.id} className='slide-item'>
                                     <img
                                         src={item.img}
                                         alt={item.title}
