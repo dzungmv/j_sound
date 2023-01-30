@@ -20,7 +20,7 @@ const Sidebar = () => {
                                     ? 'sidebar-item active'
                                     : 'sidebar-item'
                             }
-                            //     onClick={() => router.push}
+                        //     onClick={() => router.push}
                         >
                             <div className='sidebar-item-icon'>
                                 <i className={item.icon}></i>

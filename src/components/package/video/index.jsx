@@ -13,7 +13,7 @@ const Video = ({ data }) => {
                 </div>
             </div>
 
-            <div className='more'>
+            {/* <div className='more'>
                 <div className='content-container'>
                     {data_more.map((item) => {
                         return (
@@ -21,6 +21,9 @@ const Video = ({ data }) => {
                                 key={item.id}
                                 className='content-item'
                                 href={`/video/${item.id}`}
+                                onClick={() => {
+                                    window.scrollTo(0, 0);
+                                }}
                             >
                                 <img src={item.thumbnail} alt='' />
                                 <div className='content-item-info'>
@@ -35,6 +38,10 @@ const Video = ({ data }) => {
                         );
                     })}
                 </div>
+            </div> */}
+
+            <div className='more-item'>
+                hehe
             </div>
         </div>
     );

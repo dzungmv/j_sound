@@ -1,5 +1,5 @@
 .wrapperVideo {
-    //     width: 100%;
+    width: 100%;
     padding: 0 20px 0 20px;
     padding-top: 66px;
     background: linear-gradient(to bottom, #ebc0fd 0%, #d9ded8 100%);
@@ -7,15 +7,10 @@
       :global .video-container {
             width: 100%;
             height: 500px;
-            border-radius: 16px 16px 0 0;
             position: relative;
-           
-
             img {
                 width: 100%;
                 height: 100%;
-                border-radius: 16px 16px 0 0;
-
                 filter: blur(8px);
             }
 
@@ -25,26 +20,26 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
                 width: 50%;
-                height: 90%;
-                
+                height: 100%;
                 margin: 0 auto;
-                border-radius: 24px;
-                z-index: 100;
+                border-radius: 16px;
+                // z-index: 100;
 
                 iframe {
                 width: 100%;
                 height: 100%;
-                border-radius: 24px;
+                border-radius: 16px;
                 }
             }
         }
 
      :global .more {
+        width: 100%;
         margin-top: 32px;
         background-color: rgb(255,255,255);
-        padding: 16px;
         border-radius: 16px;
             .content-container{
+            
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -53,7 +48,8 @@
             }
 
             .content-item {
-                width: calc(100% / 5 - 18px);
+                   
+                width: calc(100% / 4 - 18px);
                 height: 150px;
                 border-radius: 15px;
                 position: relative;
@@ -94,6 +90,15 @@
             }
         }
 
+        :global .more-item {
+            max-width: 580px;
+            width: 100%;
+            background-color: rgb(255,255,255);
+            border-radius: 16px;
+            margin: 32px auto;
+            height: 1000px;
+        }
+
 
     @media screen  and (max-width: 600px) {
         padding: 0;
@@ -113,6 +118,15 @@
                 }
             }
         }
+
+         :global .more { 
+            margin-top: 0;
+             border-radius: 0;
+
+             .content-item { 
+                width: 100%;
+             }
+         }
     }
 
       
