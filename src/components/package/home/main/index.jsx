@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
@@ -11,8 +10,6 @@ import styles from './main.module.scss';
 import Link from 'next/link';
 
 const MainPage = () => {
-    const router = useRouter();
-
     return (
         <main className={styles.wrapperMainPage}>
             <div className='slide'>
@@ -69,7 +66,7 @@ const MainPage = () => {
                     {data.map((item) => {
                         return (
                             <Link
-                                key={item.data}
+                                key={item.id}
                                 className='content-item'
                                 href={`/video/${item.id}`}
                             >

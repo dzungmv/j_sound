@@ -3,7 +3,9 @@
         "id": 1,
         "name": "NHA - Ký ức trốn đi",
         "author": "NHA",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/nha.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/kyuc.jpg",
+
         "link": "https://www.youtube.com/embed/g_4Ql9JmoJ0",
         "view": 1000,
         "type": "sadness"
@@ -12,6 +14,7 @@
         "id": 2,
         "name": "Đường chân trời",
         "author": "Chillies",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/duongchantroi.jpg",
         "link": "https://www.youtube.com/embed/4stzqTzSDs0",
         "view": 1000,
@@ -21,6 +24,7 @@
         "id": 3,
         "name": "Chẳng Nói Nên Lời",
         "author": "Hoàng Dũng",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hoangdung.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/changnoinenloi.jpg",
         "link": "https://www.youtube.com/embed/9cPJLlNwO-w",
         "view": 1000,
@@ -31,6 +35,7 @@
         "id": 4,
         "name": "Có Em Đời Bỗng Vui - Chillies",
         "author": "Chillies",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/coemdoibongvuim.jpg",
         "link": "https://www.youtube.com/embed/Jd3DFeKw-2A",
         "view": 1000,
@@ -41,8 +46,19 @@
         "id": 5,
         "name": "Mascara - Chillies",
         "author": "Chillies",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/mascara.jpg",
         "link": "https://www.youtube.com/embed/dIuQXmXBUpk",
+        "view": 1000,
+        "type": "sadness"
+    },
+    {
+        "id": 6,
+        "name": "Cũng đành thôi ‣ Đức Phúc",
+        "author": "Đức Phúc",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/ducphuc.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/cungdanhthoi.jpg",
+        "link": "https://www.youtube.com/embed/Qs-XcmaxaLw",
         "view": 1000,
         "type": "sadness"
     }
