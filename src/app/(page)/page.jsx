@@ -1,11 +1,9 @@
-import HomPage from "@/components/package/home";
-
+import MainPage from "@/components/package/home/main";
 
 export default function Home() {
     return (
         <>
-            <HomPage />
-            {/* <p>Hehe</p> */}
+            <MainPage />
         </>
     );
 }

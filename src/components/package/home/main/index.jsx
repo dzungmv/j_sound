@@ -8,6 +8,7 @@ import 'swiper/css';
 import data from '@/components/common/data/data.json';
 
 import styles from './main.module.scss';
+import Link from 'next/link';
 
 const MainPage = () => {
     const router = useRouter();
@@ -67,10 +68,10 @@ const MainPage = () => {
                 <div className='content-container'>
                     {data.map((item) => {
                         return (
-                            <div
+                            <Link
                                 key={item.data}
                                 className='content-item'
-                                onClick={() => router.push(`/video/${item.id}`)}
+                                href={`/video/${item.id}`}
                             >
                                 <img src={item.thumbnail} alt='' />
                                 <div className='content-item-info'>
@@ -81,7 +82,7 @@ const MainPage = () => {
                                         {item.author}
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         );
                     })}
                 </div>

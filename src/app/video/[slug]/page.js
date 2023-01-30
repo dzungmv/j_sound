@@ -1,18 +1,22 @@
 'use client';
+import { useEffect, useState } from 'react';
 
-import data from '@/components/common/data/data.json';
-import Header from '@/components/common/header';
 import Video from '@/components/package/video';
-import { usePathname } from 'next/navigation';
+import main_data from '@/components/common/data/data.json';
 
-export default function Page() {
-    const pathname = usePathname();
 
-    console.log('path name', pathname);
+export default function Page({ params }) {
 
+    const [data, setData] = useState();
+    useEffect(() => {
+        ;(async () => {
+            const video_data = await main_data.find((video) => video.id === Number(params.slug));
+            setData(video_data);
+        })()
+    }, [params.slug])
     return (
         <>
-            <p>{pathname}</p>
+            <Video data={data} />
         </>
     );
 }
