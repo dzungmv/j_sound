@@ -1,3 +1,4 @@
+import Header from '@/components/common/header';
 import EmptyLayout from '@/components/layouts/empty';
 import MainLayout from '@/components/layouts/main';
 import './styles/globals.scss';
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body>
+                {/* <Header /> */}
                 <Layout>{children}</Layout>
             </body>
         </html>

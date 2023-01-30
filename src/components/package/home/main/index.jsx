@@ -50,6 +50,7 @@ const MainPage = () => {
                             <SwiperSlide key={item.id}>
                                 <div key={item.id} className='slide-item'>
                                     <img
+                                        key={item.id}
                                         src={item.img}
                                         alt={item.title}
                                         loading='lazy'

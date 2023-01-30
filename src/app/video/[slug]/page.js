@@ -1,13 +1,18 @@
+'use client';
+
 import data from '@/components/common/data/data.json';
 import Header from '@/components/common/header';
 import Video from '@/components/package/video';
+import { usePathname } from 'next/navigation';
 
-export default function Page({ video }) {
+export default function Page() {
+    const pathname = usePathname();
+
+    console.log('path name', pathname);
+
     return (
         <>
-            {/* <Header />
-            <Video data={video} /> */}
-            <p>Check</p>
+            <p>{pathname}</p>
         </>
     );
 }

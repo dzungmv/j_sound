@@ -1,8 +1,8 @@
 'use client';
-
+import '@/app/styles/globals.scss'
 import Header from '@/components/common/header';
 
-export default function Home() {
+export default function NotFound() {
     return (
         <>
             <Header />
