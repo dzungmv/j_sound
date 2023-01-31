@@ -18,8 +18,6 @@ export default function Page({ params }) {
 
     return (
         <>
-            <Head title={data?.name} />
-
             <Video data={data} />
         </>
     );

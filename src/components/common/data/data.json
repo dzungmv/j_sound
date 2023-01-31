@@ -61,5 +61,25 @@
         "link": "https://www.youtube.com/embed/Qs-XcmaxaLw",
         "view": 1000,
         "type": "sadness"
+    },
+    {
+        "id": 7,
+        "name": "VÌ EM LÀ CON GÁI",
+        "author": "LyLy",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lyly.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/viemlacongai.jpg",
+        "link": "https://www.youtube.com/embed/6aqjeMep6as",
+        "view": 1000,
+        "type": "mood"
+    },
+    {
+        "id": 8,
+        "name": "hai mươi hai",
+        "author": "Amee",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/amee.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/haimuoihai.jpg",
+        "link": "https://www.youtube.com/embed/rThHfQhaLUs",
+        "view": 1000,
+        "type": "mood"
     }
 ]
