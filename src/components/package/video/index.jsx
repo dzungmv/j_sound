@@ -13,6 +13,12 @@ const Video = ({ data }) => {
                         key={data?.id || ''}
                         src={data?.link || ''}
                         frameBorder='0'
+                        allowfullscreen='allowfullscreen'
+                        mozallowfullscreen='mozallowfullscreen'
+                        msallowfullscreen='msallowfullscreen'
+                        oallowfullscreen='oallowfullscreen'
+                        webkitallowfullscreen='webkitallowfullscreen'
+                        allow='autoplay; fullscreen; picture-in-picture'
                     />
                 </div>
             </div>
@@ -26,7 +32,10 @@ const Video = ({ data }) => {
                             loading='lazy'
                         />
                     </div>
-                    <div className='auth-name'>{data?.author}</div>
+                    <div className='auth-info'>
+                        <div className='auth-song'>{data?.name}</div>
+                        <div className='auth-name'>{data?.author}</div>
+                    </div>
                 </div>
                 <div className='content-right'>
                     <div className='content-title'>Relative</div>
@@ -34,7 +43,11 @@ const Video = ({ data }) => {
                         {data_more.map((item) => {
                             return (
                                 <Link
-                                    className='item'
+                                    className={
+                                        item.id === data?.id
+                                            ? 'item active'
+                                            : 'item'
+                                    }
                                     key={item.id}
                                     href={`/video/${item.id}`}
                                     onClick={() => {
