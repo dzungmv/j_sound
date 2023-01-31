@@ -1,4 +1,5 @@
-import MainPage from "@/components/package/home/main";
+import SEO from '@/components/common/seo';
+import MainPage from '@/components/package/home/main';
 
 export default function Home() {
     return (
@@ -7,5 +8,3 @@ export default function Home() {
         </>
     );
 }
-
-

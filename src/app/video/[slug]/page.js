@@ -3,19 +3,23 @@ import { useEffect, useState } from 'react';
 
 import Video from '@/components/package/video';
 import main_data from '@/components/common/data/data.json';
-
+import Head from 'next/head';
 
 export default function Page({ params }) {
-
     const [data, setData] = useState();
     useEffect(() => {
-        ;(async () => {
-            const video_data = await main_data.find((video) => video.id === Number(params.slug));
+        (async () => {
+            const video_data = await main_data.find(
+                (video) => video.id === Number(params.slug)
+            );
             setData(video_data);
-        })()
-    }, [params.slug])
+        })();
+    }, [params.slug]);
+
     return (
         <>
+            <Head title={data?.name} />
+
             <Video data={data} />
         </>
     );
