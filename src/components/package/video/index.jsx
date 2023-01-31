@@ -13,7 +13,7 @@ const Video = ({ data }) => {
                         key={data?.id || ''}
                         src={data?.link || ''}
                         frameBorder='0'
-                        allowfullscreen='allowfullscreen'
+                        allowFullScreen='allowfullscreen'
                         mozallowfullscreen='mozallowfullscreen'
                         msallowfullscreen='msallowfullscreen'
                         oallowfullscreen='oallowfullscreen'
