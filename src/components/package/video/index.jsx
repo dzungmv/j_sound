@@ -1,9 +1,21 @@
 /* eslint-disable @next/next/no-img-element */
+
+import { Itim } from '@next/font/google';
 import styles from './video.module.scss';
 import data_more from '@/components/common/data/data.json';
 import Link from 'next/link';
 
+const itimFont = Itim({
+    weight: ['400'],
+    // subsets for vietnamese
+    subsets: ['vietnamese', 'latin'],
+});
+
 const Video = ({ data }) => {
+    const isVideoPlaying = data_more.filter((item) => item?.id === data?.id);
+    const anotherVideo = data_more.filter((item) => item?.id !== data?.id);
+    const finalData = [...isVideoPlaying, ...anotherVideo];
+
     return (
         <div className={styles.wrapperVideo}>
             <div className='video-container'>
@@ -33,15 +45,17 @@ const Video = ({ data }) => {
                         />
                     </div>
                     <div className='auth-info'>
-                        <div className='auth-song'>{data?.name}</div>
+                        <span className={itimFont.className}>{data?.name}</span>
                         <div className='auth-name'>{data?.author}</div>
                     </div>
                 </div>
                 <div className='content-right'>
                     <div className='content-title'>Relative</div>
                     <div className='container'>
-                        {data_more.map((item) => {
+                        {finalData.map((item) => {
                             return (
+                                // if item.id === data?.id => active and render first
+
                                 <Link
                                     className={
                                         item.id === data?.id
@@ -51,7 +65,10 @@ const Video = ({ data }) => {
                                     key={item.id}
                                     href={`/video/${item.id}`}
                                     onClick={() => {
-                                        window.scrollTo(0, 0);
+                                        window.scrollTo({
+                                            top: 0,
+                                            behavior: 'smooth',
+                                        });
                                     }}
                                 >
                                     <div className='item-img'>
@@ -59,7 +76,7 @@ const Video = ({ data }) => {
                                     </div>
                                     <div className='item-info'>
                                         <div>
-                                            <div className='item-info-song'>
+                                            <div className={`item-info-song`}>
                                                 {item.name}
                                             </div>
                                             <div className='item-info-auth'>
