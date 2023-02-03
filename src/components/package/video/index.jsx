@@ -12,8 +12,15 @@ const itimFont = Itim({
 });
 
 const Video = ({ data }) => {
-    const isVideoPlaying = data_more.filter((item) => item?.id === data?.id);
-    const anotherVideo = data_more.filter((item) => item?.id !== data?.id);
+    const isVideoPlaying = [];
+    const anotherVideo = [];
+
+    data_more.forEach((item) => {
+        item.id === data?.id
+            ? isVideoPlaying.push(item)
+            : anotherVideo.push(item);
+    });
+
     const finalData = [...isVideoPlaying, ...anotherVideo];
 
     return (
