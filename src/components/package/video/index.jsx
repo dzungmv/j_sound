@@ -4,6 +4,7 @@ import { Itim } from '@next/font/google';
 import styles from './video.module.scss';
 import data_more from '@/components/common/data/data.json';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 const itimFont = Itim({
     weight: ['400'],
@@ -12,6 +13,7 @@ const itimFont = Itim({
 });
 
 const Video = ({ data }) => {
+    const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
 
@@ -63,19 +65,22 @@ const Video = ({ data }) => {
                             return (
                                 // if item.id === data?.id => active and render first
 
-                                <Link
+                                <div
                                     className={
                                         item.id === data?.id
                                             ? 'item active'
                                             : 'item'
                                     }
                                     key={item.id}
-                                    href={`/video/${item.id}`}
+                                    // href={`/video/${item.id}`}
                                     onClick={() => {
-                                        window.scrollTo({
-                                            top: 0,
-                                            behavior: 'smooth',
-                                        });
+                                        router.push(`/video/${item.id}`);
+                                        setTimeout(() => {
+                                            window.scrollTo({
+                                                top: 0,
+                                                behavior: 'smooth',
+                                            });
+                                        }, 800);
                                     }}
                                 >
                                     <div className='item-img'>
@@ -98,7 +103,7 @@ const Video = ({ data }) => {
                                             </span>
                                         </div>
                                     </div>
-                                </Link>
+                                </div>
                             );
                         })}
                     </div>

@@ -1,0 +1,55 @@
+.wrapperChill {
+    width: 100%;
+
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+
+    :global .content {
+        width: 100%;
+
+        .item {
+            width: calc(100% / 4 - 18px);
+            height: 150px;
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+            transition: 0.7s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+                opacity: 0.8;
+            }
+
+            &-info {
+                position: absolute;
+                bottom: 0;
+                left: 8px;
+                z-index: 2;
+
+                &-song {
+                    font-weight: 500;
+                    color: #fff;
+                }
+
+                &-auth {
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
