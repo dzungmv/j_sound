@@ -1,5 +1,5 @@
 import data from '@/components/common/data/data.json';
-import ChillPage from '@/components/package/home/chill';
+import LofiPage from '@/components/package/home/lofi';
 
 // const ChillPage = dynamic(() => import('@/components/package/home/chill'), {
 //     loading: () => <p>Loading...</p>,
@@ -8,7 +8,7 @@ import ChillPage from '@/components/package/home/chill';
 export default function Page() {
     return (
         <>
-            <ChillPage data={data} />
+            <LofiPage data={data} />
         </>
     );
 }

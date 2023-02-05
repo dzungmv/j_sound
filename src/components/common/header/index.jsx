@@ -2,8 +2,10 @@
 'use client';
 import { useState, useRef } from 'react';
 import Image from 'next/image';
-import moment from 'moment/moment';
 import { Cookie } from '@next/font/google';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 
 import styles from './header.module.scss';
 import Link from 'next/link';
@@ -78,13 +80,56 @@ const Header = () => {
             </div>
 
             <div className='header-option header-item'>
-                <span>Hello, {<Clock />}</span>
-                <div className='header-option-item'>
-                    <i className='fa-solid fa-gear'></i>
-                </div>
+                <span className='header-option-time'>Hello, {<Clock />}</span>
+                <Tippy
+                    content={<Tooltip />}
+                    theme='light'
+                    placement='bottom'
+                    trigger='click'
+                    arrow={false}
+                    interactive={true}
+                >
+                    <div className='header-option-item'>
+                        <i className='fa-solid fa-gear'></i>
+                    </div>
+                </Tippy>
             </div>
         </main>
     );
 };
 
 export default Header;
+
+const Tooltip = () => {
+    return (
+        <div className={styles.wrapperTooltip}>
+            <div className='content'>
+                <Link
+                    href={'https://www.facebook.com/jungjung.2601/'}
+                    className='content-item'
+                    target='_blank'
+                >
+                    <div className='content-item-label'>
+                        <i className='fa-brands fa-facebook'></i>
+                    </div>
+                    <span className='content-item-name'>Find support</span>
+                </Link>
+            </div>
+
+            <div className='footer'>
+                <div className='footer-header'>
+                    <img
+                        src='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
+                        alt=''
+                    />
+                    <span> Jsound</span>
+                </div>
+
+                <div className='footer-content'>
+                    Copyright&copy; 2023 Jsound. All rights reserved.
+                </div>
+                <div className='footer-auth'>Created by jungjung261</div>
+            </div>
+        </div>
+    );
+};

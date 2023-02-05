@@ -20,7 +20,7 @@ const Sidebar = () => {
                                     ? 'sidebar-item active'
                                     : 'sidebar-item'
                             }
-                        //     onClick={() => router.push}
+                            //     onClick={() => router.push}
                         >
                             <div className='sidebar-item-icon'>
                                 <i className={item.icon}></i>
@@ -45,14 +45,20 @@ const tabs = [
     },
     {
         id: 2,
+        name: 'Lofi',
+        icon: 'fa-solid fa-headphones',
+        path: '/lofi',
+    },
+    {
+        id: 3,
         name: 'Chill',
         icon: 'fa-solid fa-moon-cloud',
         path: '/chill',
     },
     {
-        id: 3,
-        name: 'Mood',
-        icon: 'fa-solid fa-music',
-        path: '/mood',
+        id: 4,
+        name: 'Melancholic',
+        icon: 'fa-solid fa-umbrella',
+        path: '/melancholic',
     },
 ];

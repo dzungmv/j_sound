@@ -2,94 +2,113 @@
     {
         "id": 1,
         "name": "NHA - Ký ức trốn đi",
+        "slug": "ky-uc-tron-di",
         "author": "NHA",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/nha.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/kyuc.jpg",
-
         "link": "https://www.youtube.com/embed/g_4Ql9JmoJ0",
         "view": 1000,
-        "type": "sadness"
+        "type": ["sadness"]
     },
     {
         "id": 2,
         "name": "Đường chân trời",
+        "slug": "duong-chan-troi",
         "author": "Chillies",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/duongchantroi.jpg",
         "link": "https://www.youtube.com/embed/4stzqTzSDs0",
         "view": 1000,
-        "type": "mood"
+        "type": ["mood", "chill"]
     },
     {
         "id": 3,
         "name": "Chẳng Nói Nên Lời",
+        "slug": "chang-noi-nen-loi",
         "author": "Hoàng Dũng",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hoangdung.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/changnoinenloi.jpg",
         "link": "https://www.youtube.com/embed/9cPJLlNwO-w",
         "view": 1000,
-        "type": "sadness"
+        "type": ["sadness"]
     },
 
     {
         "id": 4,
         "name": "Có Em Đời Bỗng Vui - Chillies",
+        "slug": "co-em-doi-bong-vui",
         "author": "Chillies",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/coemdoibongvuim.jpg",
         "link": "https://www.youtube.com/embed/Jd3DFeKw-2A",
         "view": 1000,
-        "type": "mood"
+        "type": ["mood", "chill"]
     },
 
     {
         "id": 5,
         "name": "Mascara - Chillies",
+        "slug": "mascara",
         "author": "Chillies",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/mascara.jpg",
         "link": "https://www.youtube.com/embed/dIuQXmXBUpk",
         "view": 1000,
-        "type": "sadness"
+        "type": ["sadness"]
     },
     {
         "id": 6,
         "name": "Cũng đành thôi ‣ Đức Phúc",
+        "slug": "cung-danh-thoi",
         "author": "Đức Phúc",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/ducphuc.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/cungdanhthoi.jpg",
         "link": "https://www.youtube.com/embed/Qs-XcmaxaLw",
         "view": 1000,
-        "type": "sadness"
+        "type": ["sadness"]
     },
     {
         "id": 7,
         "name": "VÌ EM LÀ CON GÁI",
+        "slug": "vi-em-la-con-gai",
         "author": "LyLy",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lyly.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/viemlacongai.jpg",
         "link": "https://www.youtube.com/embed/6aqjeMep6as",
         "view": 1000,
-        "type": "mood"
+        "type": ["mood", "chill"]
     },
     {
         "id": 8,
         "name": "hai mươi hai",
+        "slug": "hai-muoi-hai",
         "author": "Amee",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/amee.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/haimuoihai-p.jpg",
         "link": "https://www.youtube.com/embed/rThHfQhaLUs",
         "view": 1000,
-        "type": "mood"
+        "type": ["mood", "chill"]
     },
     {
         "id": 9,
         "name": "Rồi ta sẽ ngắm pháo hoa cùng nhau...",
+        "slug": "roi-ta-se-ngam-phao-hoa-cung-nhau-lofi",
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi1.jpg",
         "link": "https://www.youtube.com/embed/KHe0BPLkie8",
         "view": 1000,
-        "type": ["lofi", "mood"]
+        "type": ["lofi", "mood", "chill"]
+    },
+    {
+        "id": 10,
+        "name": "Như Anh Đã Thấy Em...",
+        "slug": "nhu-anh-da-thay-em-lofi",
+        "author": "Lofi",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi2.jpg",
+        "link": "https://www.youtube.com/embed/GifeSespCYQ",
+        "view": 1000,
+        "type": ["lofi", "mood", "chill"]
     }
 ]

@@ -3,7 +3,6 @@
 import { Itim } from '@next/font/google';
 import styles from './video.module.scss';
 import data_more from '@/components/common/data/data.json';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 const itimFont = Itim({
@@ -74,7 +73,7 @@ const Video = ({ data }) => {
                                     key={item.id}
                                     // href={`/video/${item.id}`}
                                     onClick={() => {
-                                        router.push(`/video/${item.id}`);
+                                        router.push(`/${item.slug}`);
                                         setTimeout(() => {
                                             window.scrollTo({
                                                 top: 0,
@@ -97,9 +96,9 @@ const Video = ({ data }) => {
                                         </div>
 
                                         <div className='item-info-type'>
-                                            <span className={item.type}>
+                                            <span className={item.type[0]}>
                                                 {' '}
-                                                {item.type}
+                                                {item.type[0]}
                                             </span>
                                         </div>
                                     </div>

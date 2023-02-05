@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import styles from './chill.module.scss';
+import styles from './melancholic.module.scss';
 
-const ChillPage = ({ data }) => {
+const MelancholicPage = ({ data }) => {
     const chilldata = data.filter(
-        (item) => item.type.filter((item) => item === 'chill').length > 0
+        (item) => item.type.filter((item) => item === 'sadness').length > 0
     );
 
     return (
         <div className={styles.wrapperChill}>
-            <h3>Chill music</h3>
+            <h3>Melancholic music</h3>
             <div className='content'>
                 {chilldata.map((item) => {
                     return (
@@ -35,4 +35,4 @@ const ChillPage = ({ data }) => {
     );
 };
 
-export default ChillPage;
+export default MelancholicPage;

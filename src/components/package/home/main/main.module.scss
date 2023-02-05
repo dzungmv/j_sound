@@ -81,22 +81,25 @@
                 height: 100%;
                 object-fit: cover;
                 border-radius: 15px;
-                opacity: 0.8;
             }
 
             &-info {
                 position: absolute;
-                bottom: 0;
+                bottom: 5px;
                 left: 8px;
                 z-index: 2;
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 0 6px;
+                border-radius: 8px;
 
                 &-song {
+                    font-size: 14px;
                     font-weight: 500;
                     color: #fff;
                 }
 
                 &-auth {
-                    font-size: 14px;
+                    font-size: 12px;
                     font-weight: 500;
                     color: #fff;
                 }
@@ -143,6 +146,7 @@
         :global .content {
             &-item {
                 width: 100%;
+                height: 230px;
             }
         }
     }

@@ -68,7 +68,7 @@ const MainPage = () => {
                             <Link
                                 key={item.id}
                                 className='content-item'
-                                href={`/video/${item.id}`}
+                                href={`/${item.slug}`}
                             >
                                 <img src={item.thumbnail} alt='' />
                                 <div className='content-item-info'>
