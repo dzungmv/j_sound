@@ -4,7 +4,7 @@ export default function Head() {
     const seo = {
         title: 'JSound',
         description: 'JSound - Music for everyone',
-        image: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/seo-img.jpg',
+        image: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/seo-img.jpg',
     };
     return (
         <>
