@@ -3,11 +3,12 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/css';
+import Link from 'next/link';
+import Image from 'next/legacy/image';
 
 import data from '@/components/common/data/data.json';
 
 import styles from './main.module.scss';
-import Link from 'next/link';
 
 const MainPage = () => {
     return (
@@ -47,11 +48,11 @@ const MainPage = () => {
                         return (
                             <SwiperSlide key={item.id}>
                                 <div key={item.id} className='slide-item'>
-                                    <img
+                                    <Image
                                         key={item.id}
                                         src={item.img}
                                         alt={item.title}
-                                        loading='lazy'
+                                        layout='fill'
                                     />
                                 </div>
                             </SwiperSlide>
@@ -68,9 +69,15 @@ const MainPage = () => {
                             <Link
                                 key={item.id}
                                 className='content-item'
-                                href={`/${item.slug}`}
+                                href={`/watch/${item.slug}`}
                             >
-                                <img src={item.thumbnail} alt='' />
+                                <Image
+                                    src={item.thumbnail}
+                                    alt=''
+                                    layout='fill'
+                                    objectFit='cover'
+                                    priority={true}
+                                />
                                 <div className='content-item-info'>
                                     <div className='content-item-info-song'>
                                         {item.name}

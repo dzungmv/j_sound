@@ -3,11 +3,11 @@
 import { Itim } from '@next/font/google';
 import styles from './video.module.scss';
 import data_more from '@/components/common/data/data.json';
-import { useRouter } from 'next/navigation';
+import { notFound, useRouter } from 'next/navigation';
+import Image from 'next/legacy/image';
 
 const itimFont = Itim({
     weight: ['400'],
-    // subsets for vietnamese
     subsets: ['vietnamese', 'latin'],
 });
 
@@ -15,6 +15,8 @@ const Video = ({ data }) => {
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
+
+    console.log('Length: ', data);
 
     data_more.forEach((item) => {
         item.id === data?.id
@@ -27,36 +29,60 @@ const Video = ({ data }) => {
     return (
         <div className={styles.wrapperVideo}>
             <div className='video-container'>
-                <img src={data?.thumbnail || ''} alt='' />
+                <img src={data?.thumbnail || ''} alt='' loading='lazy' />
                 <div className='video'>
-                    <iframe
-                        key={data?.id || ''}
-                        src={data?.link || ''}
-                        frameBorder='0'
-                        allowFullScreen='allowfullscreen'
-                        mozallowfullscreen='mozallowfullscreen'
-                        msallowfullscreen='msallowfullscreen'
-                        oallowfullscreen='oallowfullscreen'
-                        webkitallowfullscreen='webkitallowfullscreen'
-                        allow='autoplay; fullscreen; picture-in-picture'
-                    />
+                    {data ? (
+                        <iframe
+                            key={data?.id || ''}
+                            src={data?.link || ''}
+                            frameBorder='0'
+                            allowFullScreen='allowfullscreen'
+                            mozallowfullscreen='mozallowfullscreen'
+                            msallowfullscreen='msallowfullscreen'
+                            oallowfullscreen='oallowfullscreen'
+                            webkitallowfullscreen='webkitallowfullscreen'
+                            allow='autoplay; fullscreen; picture-in-picture'
+                        />
+                    ) : (
+                        <div className='video-not-found'>
+                            <header>
+                                <div className='header-item'></div>
+                                <div className='header-item'></div>
+                                <div className='header-item'></div>
+                            </header>
+
+                            <div className='video-not-found-img'>
+                                <Image
+                                    src={
+                                        'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/404.png'
+                                    }
+                                    alt=''
+                                    layout='fill'
+                                />
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 
             <div className='content'>
-                <div className='content-left'>
-                    <div className='auth-img'>
-                        <img
-                            src={data?.author_img || ''}
-                            alt=''
-                            loading='lazy'
-                        />
+                {data ? (
+                    <div className='content-left'>
+                        <div className='auth-img'>
+                            <Image
+                                src={data?.author_img || ''}
+                                alt=''
+                                layout='fill'
+                            />
+                        </div>
+                        <div className='auth-info'>
+                            <span className={itimFont.className}>
+                                {data?.name}
+                            </span>
+                            <div className='auth-name'>{data?.author}</div>
+                        </div>
                     </div>
-                    <div className='auth-info'>
-                        <span className={itimFont.className}>{data?.name}</span>
-                        <div className='auth-name'>{data?.author}</div>
-                    </div>
-                </div>
+                ) : null}
                 <div className='content-right'>
                     <div className='content-title'>Relative</div>
                     <div className='container'>
@@ -73,7 +99,7 @@ const Video = ({ data }) => {
                                     key={item.id}
                                     // href={`/video/${item.id}`}
                                     onClick={() => {
-                                        router.push(`/${item.slug}`);
+                                        router.push(`/watch/${item.slug}`);
                                         setTimeout(() => {
                                             window.scrollTo({
                                                 top: 0,
@@ -83,7 +109,11 @@ const Video = ({ data }) => {
                                     }}
                                 >
                                     <div className='item-img'>
-                                        <img src={item.thumbnail} alt='' />
+                                        <Image
+                                            layout='fill'
+                                            src={item.thumbnail}
+                                            alt=''
+                                        />
                                     </div>
                                     <div className='item-info'>
                                         <div>

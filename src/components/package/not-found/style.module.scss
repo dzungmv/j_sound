@@ -1,0 +1,74 @@
+@use '../../../app/styles/variables' as var;
+
+.wrapperNotFoundPage {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ebc0fd 0%, #d9ded8 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :global .container {
+        display: flex;
+        height: 60%;
+        width: 70%;
+
+        .left {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+
+            h2 {
+                font-size: 22px;
+                font-weight: 400;
+                margin-bottom: 20px;
+            }
+
+            a {
+                border: 1px solid transparent;
+                padding: 10px 40px;
+                font-size: 15px;
+                color: #fff;
+                font-weight: 500;
+                border-radius: 6px;
+                background-color: var.$primary_color;
+                transition: 0.5s;
+
+                &:hover {
+                    border: 1px solid var.$primary_color;
+                    background-color: #fff;
+                    color: var.$primary_color;
+                }
+            }
+        }
+
+        .right {
+            width: 60%;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        :global .container {
+            width: 100%;
+            .left {
+                display: none;
+            }
+
+            .right {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+}

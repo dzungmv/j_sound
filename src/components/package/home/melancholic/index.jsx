@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import styles from './melancholic.module.scss';
 
@@ -14,11 +15,11 @@ const MelancholicPage = ({ data }) => {
                 {chilldata.map((item) => {
                     return (
                         <Link
-                            href={`/${item.slug}`}
+                            href={`/watch/${item.slug}`}
                             key={item.id}
                             className='item'
                         >
-                            <img src={item.thumbnail} alt='' />
+                            <Image layout='fill' src={item.thumbnail} alt='' />
                             <div className='item-info'>
                                 <div className='item-info-song'>
                                     {item.name}

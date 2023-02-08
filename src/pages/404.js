@@ -1,12 +1,13 @@
 'use client';
-import '@/app/styles/globals.scss'
+import '@/app/styles/globals.scss';
 import Header from '@/components/common/header';
+import NotFoundPage from '@/components/package/not-found';
 
 export default function NotFound() {
     return (
         <>
             <Header />
-            <p>Ops, not found!</p>
+            <NotFoundPage />
         </>
     );
 }
