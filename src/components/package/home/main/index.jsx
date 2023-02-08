@@ -63,7 +63,10 @@ const MainPage = () => {
                                         key={item.id}
                                         src={item.img}
                                         alt={item.title}
-                                        layout='fill'
+                                        width='0'
+                                        height='0'
+                                        sizes='100vw'
+                                        priority
                                     />
                                 </div>
                             </SwiperSlide>
@@ -87,12 +90,10 @@ const MainPage = () => {
                                     <Image
                                         src={item.thumbnail}
                                         alt=''
-                                        width={0}
-                                        height={0}
-                                        priority={true}
-                                        layout='fill'
+                                        width='0'
+                                        height='0'
+                                        sizes='100vw'
                                         fill={false}
-                                        // quality={100}
                                     />
                                     <div className='content-item-info'>
                                         <div className='content-item-info-song'>

@@ -3,8 +3,8 @@
 import { Itim } from '@next/font/google';
 import styles from './video.module.scss';
 import data_more from '@/components/common/data/data.json';
-import { notFound, useRouter } from 'next/navigation';
-import Image from 'next/legacy/image';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 const itimFont = Itim({
@@ -69,7 +69,10 @@ const Video = ({ data }) => {
                                         'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/404.png'
                                     }
                                     alt=''
-                                    layout='fill'
+                                    width='0'
+                                    height='0'
+                                    fill={false}
+                                    sizes='100vw'
                                 />
                             </div>
                         </div>
@@ -84,7 +87,10 @@ const Video = ({ data }) => {
                             <Image
                                 src={data?.author_img || ''}
                                 alt=''
-                                layout='fill'
+                                width='0'
+                                height='0'
+                                fill={false}
+                                sizes='100vw'
                             />
                         </div>
                         <div className='auth-info'>
@@ -116,9 +122,12 @@ const Video = ({ data }) => {
                                 >
                                     <div className='item-img'>
                                         <Image
-                                            layout='fill'
                                             src={item.thumbnail}
                                             alt=''
+                                            width='0'
+                                            height='0'
+                                            fill={false}
+                                            sizes='100vw'
                                         />
                                     </div>
                                     <div className='item-info'>

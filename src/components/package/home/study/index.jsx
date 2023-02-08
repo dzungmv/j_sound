@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './study.module.scss';
 
@@ -19,7 +19,14 @@ const StudyPage = ({ data }) => {
                             key={item.id}
                             className='item'
                         >
-                            <Image layout='fill' src={item.thumbnail} alt='' />
+                            <Image
+                                src={item.thumbnail}
+                                alt=''
+                                width='0'
+                                height='0'
+                                sizes='100vw'
+                                fill={false}
+                            />
                             <div className='item-info'>
                                 <div className='item-info-song'>
                                     {item.name}
