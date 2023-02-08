@@ -220,5 +220,38 @@
         "link": "https://www.youtube.com/embed/BOyO8sZOaOQ",
         "view": 1000,
         "type": ["mood", "chill"]
+    },
+    {
+        "id": 21,
+        "name": "Chill Vibes - Aesthetic Music",
+        "slug": "chill-vibes-aesthetic-music",
+        "author": "Lofi",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi3.jpg",
+        "link": "https://www.youtube.com/embed/a76ttVyzx_A",
+        "view": 1000,
+        "type": ["mood", "chill", "lofi", "study"]
+    },
+    {
+        "id": 22,
+        "name": "Japanese night cafe vibes",
+        "slug": "japanese-night-cafe-vibes",
+        "author": "Lofi",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi4.jpg",
+        "link": "https://www.youtube.com/embed/9FvvbVI5rYA",
+        "view": 1000,
+        "type": ["mood", "chill", "lofi", "study"]
+    },
+    {
+        "id": 23,
+        "name": "Piano Studio Ghibli",
+        "slug": "piano-studio-ghibli",
+        "author": "Lofi",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi5.jpg",
+        "link": "https://www.youtube.com/embed/HGl75kurxok",
+        "view": 1000,
+        "type": ["mood", "chill", "lofi", "study"]
     }
 ]

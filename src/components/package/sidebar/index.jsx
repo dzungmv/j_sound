@@ -61,4 +61,10 @@ const tabs = [
         icon: 'fa-solid fa-umbrella',
         path: '/melancholic',
     },
+    {
+        id: 5,
+        name: 'Study',
+        icon: 'fa-solid fa-book-heart',
+        path: '/study',
+    },
 ];
