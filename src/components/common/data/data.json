@@ -110,5 +110,115 @@
         "link": "https://www.youtube.com/embed/GifeSespCYQ",
         "view": 1000,
         "type": ["lofi", "mood", "chill"]
+    },
+    {
+        "id": 11,
+        "name": "Yolo",
+        "slug": "yolo",
+        "author": "Lofi",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/yolo.jpg",
+        "link": "https://www.youtube.com/embed/iwFK_qjCDSQ",
+        "view": 1000,
+        "type": ["lofi", "mood", "chill"]
+    },
+    {
+        "id": 12,
+        "name": "Giấc Mơ Rất Thơ",
+        "slug": "giac-mo-rat-tho",
+        "author": "Mer",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/mer.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/giacmoratho.jpg",
+        "link": "https://www.youtube.com/embed/aA-gyqlKtrE",
+        "view": 1000,
+        "type": ["mood", "chill"]
+    },
+    {
+        "id": 13,
+        "name": "Airplan Mode",
+        "slug": "airplan-mode",
+        "author": "Hayd",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hayd.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/airplanemod.jpg",
+        "link": "https://www.youtube.com/embed/blOvOaB2fUs",
+        "view": 1000,
+        "type": ["sadness"]
+    },
+    {
+        "id": 14,
+        "name": "Head in the cloud",
+        "slug": "head-in-the-cloud",
+        "author": "Hayd",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hayd.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/headcloud.jpg",
+        "link": "https://www.youtube.com/embed/-uFQzcY7YHc",
+        "view": 1000,
+        "type": ["sadness"]
+    },
+    {
+        "id": 15,
+        "name": "Yêu Người Có Ước Mơ",
+        "slug": "yeu-nguoi-co-uoc-mo",
+        "author": "buitruonglinh",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/buitruonglinh.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/yeunguoicouocmo.jpg",
+        "link": "https://www.youtube.com/embed/6r7jzy1LABY",
+        "view": 1000,
+        "type": ["sadness"]
+    },
+    {
+        "id": 16,
+        "name": "Pluto Projector",
+        "slug": "pluto-projector",
+        "author": "Rex Orange County",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/rexorange.jpeg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/plutoproject.jpg",
+        "link": "https://www.youtube.com/embed/Pi9J4epTWGM",
+        "view": 1000,
+        "type": ["sadness"]
+    },
+    {
+        "id": 17,
+        "name": "Amazing",
+        "slug": "amazing",
+        "author": "Rex Orange County",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/rexorange.jpeg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/amazing.jpg",
+        "link": "https://www.youtube.com/embed/ZmtNSspTkmM",
+        "view": 1000,
+        "type": ["mood", "chill"]
+    },
+    {
+        "id": 18,
+        "name": "Loving is Easy",
+        "slug": "loving-is-easy",
+        "author": "Rex Orange County",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/rexorange.jpeg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lovingeasy.jpg",
+        "link": "https://www.youtube.com/embed/bPy3hQlqCZs",
+        "view": 1000,
+        "type": ["mood", "chill"]
+    },
+    {
+        "id": 19,
+        "name": "Du miên",
+        "slug": "du-mien",
+        "author": "Mer",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/mer.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/dumien.jpeg",
+        "link": "https://www.youtube.com/embed/PS7ecAcXml4",
+        "view": 1000,
+        "type": ["mood", "chill"]
+    },
+    {
+        "id": 20,
+        "name": "this is what falling in love feels like",
+        "slug": "this-is-what-falling-in-love-feels-like",
+        "author": "JVKE",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/fallinlovefeellike.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/fallinlovefeellike.jpg",
+        "link": "https://www.youtube.com/embed/BOyO8sZOaOQ",
+        "view": 1000,
+        "type": ["mood", "chill"]
     }
 ]

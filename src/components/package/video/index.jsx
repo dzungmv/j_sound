@@ -5,6 +5,7 @@ import styles from './video.module.scss';
 import data_more from '@/components/common/data/data.json';
 import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/legacy/image';
+import { useEffect } from 'react';
 
 const itimFont = Itim({
     weight: ['400'],
@@ -16,13 +17,24 @@ const Video = ({ data }) => {
     const isVideoPlaying = [];
     const anotherVideo = [];
 
-    console.log('Length: ', data);
-
     data_more.forEach((item) => {
         item.id === data?.id
             ? isVideoPlaying.push(item)
             : anotherVideo.push(item);
     });
+
+    useEffect(() => {
+        const scrollTop = setTimeout(() => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            });
+        }, 800);
+
+        return () => {
+            clearTimeout(scrollTop);
+        };
+    }, []);
 
     const finalData = [...isVideoPlaying, ...anotherVideo];
 
@@ -100,12 +112,6 @@ const Video = ({ data }) => {
                                     // href={`/video/${item.id}`}
                                     onClick={() => {
                                         router.push(`/watch/${item.slug}`);
-                                        setTimeout(() => {
-                                            window.scrollTo({
-                                                top: 0,
-                                                behavior: 'smooth',
-                                            });
-                                        }, 800);
                                     }}
                                 >
                                     <div className='item-img'>

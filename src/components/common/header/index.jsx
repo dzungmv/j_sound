@@ -40,7 +40,7 @@ const Header = () => {
                     height={54}
                     priority
                 />
-                <span className={cookie_font.className}>JSound</span>
+                <h1 className={cookie_font.className}>JSound</h1>
             </Link>
 
             <div className='header-search header-item'>
@@ -58,7 +58,7 @@ const Header = () => {
                             return (
                                 <Link
                                     key={item.id}
-                                    href={`/video/${item.id}`}
+                                    href={`/watch/${item.slug}`}
                                     className='search-box-item'
                                     onClick={() => {
                                         setSearchResult('');

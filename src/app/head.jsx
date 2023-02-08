@@ -1,5 +1,3 @@
-import SEO from '@/components/common/seo';
-
 export default function Head() {
     const seo = {
         title: 'JSound',
@@ -16,7 +14,14 @@ export default function Head() {
                 rel='icon'
                 href='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
             />
-            <title>JSound</title>
+
+            {/* reel apple touch icon */}
+            <link
+                rel='apple-touch-icon'
+                href='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
+            />
+
+            <title>{seo.description}</title>
             <meta name='title' content={seo.title} />
             <meta name='description' content={seo.description} />
 
