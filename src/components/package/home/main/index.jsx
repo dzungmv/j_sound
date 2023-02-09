@@ -30,7 +30,7 @@ const MainPage = () => {
                 </div>
                 <Swiper
                     modules={[Pagination, Navigation, Autoplay]}
-                    slidesPerView={1}
+                    slidesPerView={3}
                     spaceBetween={30}
                     slidesPerGroup={1}
                     autoplay={{
@@ -58,15 +58,14 @@ const MainPage = () => {
                     {data_slider.map((item) => {
                         return (
                             <SwiperSlide key={item.id}>
-                                <div key={item.id} className='slide-item'>
+                                <div className='slide-item'>
                                     <Image
-                                        key={item.id}
                                         src={item.img}
-                                        alt={item.title}
+                                        alt=''
                                         width='0'
                                         height='0'
                                         sizes='100vw'
-                                        priority
+                                    // priority
                                     />
                                 </div>
                             </SwiperSlide>
@@ -133,10 +132,5 @@ const data_slider = [
         img: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/slider/chill2.jpg',
         url: '/jazz-music',
     },
-    {
-        id: 4,
-        title: 'Rock music',
-        img: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/slider/lofi2.jpg',
-        url: '/rock-music',
-    },
+
 ];
