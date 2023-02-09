@@ -33,13 +33,16 @@ const Header = () => {
     return (
         <main className={styles.wrapperHeader}>
             <Link href={'/'} className='header-logo header-item' passHref>
-                <Image
-                    src='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
-                    alt='logo'
-                    width={54}
-                    height={54}
-                    priority
-                />
+                <div className='header-logo-img'>
+                    <Image
+                        src='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
+                        alt='logo'
+                        width='0'
+                        height='0'
+                        sizes='100vw'
+                        priority
+                    />
+                </div >
                 <h1 className={cookie_font.className}>JSound</h1>
             </Link>
 
@@ -118,9 +121,12 @@ const Tooltip = () => {
 
             <div className='footer'>
                 <div className='footer-header'>
-                    <img
+                    <Image
                         src='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
                         alt=''
+                        width='0'
+                        height='0'
+                        sizes='100vw'
                     />
                     <span> Jsound</span>
                 </div>
