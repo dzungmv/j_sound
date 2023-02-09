@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 const Clock = () => {
-    const [time, setTime] = useState(new Date());
+    const [time, setTime] = useState('');
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -11,6 +11,10 @@ const Clock = () => {
         }, 1000);
         return () => clearInterval(interval);
     }, []);
+
+    if (!time) {
+        return null;
+    }
 
     return <span>{time.toLocaleTimeString()}</span>;
 };
