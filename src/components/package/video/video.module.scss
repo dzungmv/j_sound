@@ -1,6 +1,23 @@
+@use '../../../app/styles/_variables' as var;
+
 .wrapperVideo {
     width: 100%;
     background: linear-gradient(to bottom, #ebc0fd 0%, #d9ded8 100%);
+    // position: relative;
+
+    :global .fullscreen-enabled {
+        .video-container {
+            img {
+                height: 100vh;
+            }
+            .video {
+                margin-top: 0;
+                max-width: none;
+                // width: 100%;
+                width: 93%;
+            }
+        }
+    }
 
     :global .video-container {
         width: 100%;
@@ -91,6 +108,41 @@
                         pointer-events: none;
                     }
                 }
+            }
+        }
+    }
+
+    :global .btn-fullscreen {
+        position: fixed;
+        bottom: 40px;
+        right: 50px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        background-color: var.$primary_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        animation: circle 1.5s ease 1;
+        animation-delay: 3s;
+
+        i {
+            font-size: 20px;
+            color: #fff;
+            animation: zoom-in-zoom-out 1.5s ease 5;
+            // transition smooth
+            transition: all 0.3s ease-in-out;
+            animation-delay: 3.1s;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid var.$primary_color;
+            i {
+                color: var.$primary_color;
             }
         }
     }
@@ -224,6 +276,10 @@
     }
 
     @media screen and (max-width: 600px) {
+        :global .btn-fullscreen {
+            display: none;
+        }
+
         :global .video-container {
             margin-bottom: 0;
             img {
@@ -298,6 +354,13 @@
     }
 
     @media screen and (min-width: 600px) and (max-width: 1023.8px) {
+        :global .fullscreen-enabled {
+            .video-container {
+                .video {
+                    width: 95%;
+                }
+            }
+        }
         :global .video-container {
             margin-bottom: 190px;
             img {
@@ -316,13 +379,15 @@
         }
     }
 
-    // @media screen and (min-width: 1024px) and (max-width: 1200px) {
-    //     :global .video-container {
-    //         .video {
-    //             width: 90%;
-    //         }
-    //     }
-    // }
+    @media screen and (min-width: 1024px) and (max-width: 1200px) {
+        :global .fullscreen-enabled {
+            .video-container {
+                .video {
+                    width: 93%;
+                }
+            }
+        }
+    }
 
     // @media screen and (min-width: 2560px) {
     //     :global .video-container {

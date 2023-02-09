@@ -6,6 +6,7 @@ import data_more from '@/components/common/data/data.json';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 
 const itimFont = Itim({
     weight: ['400'],
@@ -16,6 +17,8 @@ const Video = ({ data }) => {
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
+
+    const handleFullScreen = useFullScreenHandle();
 
     data_more.forEach((item) => {
         item.id === data?.id
@@ -40,7 +43,7 @@ const Video = ({ data }) => {
 
     return (
         <div className={styles.wrapperVideo}>
-            <div className='video-container'>
+            {/* <div className='video-container'>
                 <img src={data?.thumbnail || ''} alt='' loading='lazy' />
                 <div className='video'>
                     {data ? (
@@ -78,6 +81,68 @@ const Video = ({ data }) => {
                         </div>
                     )}
                 </div>
+            </div> */}
+
+            <FullScreen handle={handleFullScreen}>
+                <div className='video-container'>
+                    {/* <svg style={{ display: 'none' }}>
+                        <filter id='water'>
+                            <feTurbulence
+                                type='turbulence'
+                                baseFrequency='0.01 0.003'
+                            >
+                                <animate
+                                    attributeName='baseFrequency'
+                                    from='0.01 0.003'
+                                    to='0.01 0.05'
+                                    dur='10s'
+                                    repeatCount='indefinite'
+                                ></animate>
+                            </feTurbulence>
+
+                            <feDisplacementMap
+                                in='SourceGraphic'
+                                scale='20'
+                            ></feDisplacementMap>
+                        </filter>
+                    </svg> */}
+                    <img src={data?.thumbnail || ''} alt='' loading='lazy' />
+                    <div className='video'>
+                        {data ? (
+                            <iframe
+                                key={data?.id || ''}
+                                src={data?.link || ''}
+                                frameBorder='0'
+                                allow='picture-in-picture'
+                            />
+                        ) : (
+                            <div className='video-not-found'>
+                                <header>
+                                    <div className='header-item'></div>
+                                    <div className='header-item'></div>
+                                    <div className='header-item'></div>
+                                </header>
+
+                                <div className='video-not-found-img'>
+                                    <Image
+                                        src={
+                                            'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/404.png'
+                                        }
+                                        alt=''
+                                        width='0'
+                                        height='0'
+                                        fill={false}
+                                        sizes='100vw'
+                                    />
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
+            </FullScreen>
+
+            <div className='btn-fullscreen' onClick={handleFullScreen.enter}>
+                <i className='fa-solid fa-expand'></i>
             </div>
 
             <div className='content'>

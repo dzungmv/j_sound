@@ -29,7 +29,6 @@
             }
         }
 
-
         h1 {
             color: var.$primary_color;
             font-size: 24px;
@@ -139,7 +138,7 @@
                 cursor: pointer;
 
                 i {
-                    transform: rotate(3.142rad);
+                    animation: circle 1s ease-in-out;
                     color: var.$primary_color;
                 }
             }

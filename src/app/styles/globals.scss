@@ -1,4 +1,5 @@
 @import 'normalize.css';
+@import './animation.scss';
 
 * {
     box-sizing: border-box;
@@ -93,4 +94,54 @@ body {
 .html5-video-player.ended-mode,
 .html5-video-player.ytp-fullscreen {
     background-color: #fff !important;
+}
+
+.notify {
+    position: fixed;
+    bottom: 32px;
+    left: 32px;
+    width: 22%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 8px;
+    border-radius: 12px;
+    padding: 0 8px;
+    font-size: 14px;
+    font-weight: 500;
+    // border: 1px solid #000;
+
+    .close-nofify {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        position: absolute;
+        right: 8px;
+        background-color: rgba(255, 255, 255, 0.3);
+        cursor: pointer;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+    }
+}
+
+.offline {
+    // background warning
+    background-color: #000;
+    color: #fff;
+}
+
+.online {
+    // background success
+    background-color: #000;
+    color: #fff;
+    .fa-wifi {
+        color: greenyellow;
+    }
 }
