@@ -53,8 +53,7 @@ const MainPage = () => {
                         1000: {
                             slidesPerView: 3,
                         },
-                    }}
-                >
+                    }}>
                     {data_slider.map((item) => {
                         return (
                             <SwiperSlide key={item.id}>
@@ -65,7 +64,7 @@ const MainPage = () => {
                                         width='0'
                                         height='0'
                                         sizes='100vw'
-                                    // priority
+                                        // priority
                                     />
                                 </div>
                             </SwiperSlide>
@@ -84,8 +83,7 @@ const MainPage = () => {
                                 <Link
                                     key={item.id}
                                     className='content-item'
-                                    href={`/watch/${item.slug}`}
-                                >
+                                    href={`/watch/${item.slug}`}>
                                     <Image
                                         src={item.thumbnail}
                                         alt=''
@@ -132,5 +130,4 @@ const data_slider = [
         img: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/slider/chill2.jpg',
         url: '/jazz-music',
     },
-
 ];

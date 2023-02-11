@@ -7,7 +7,7 @@ const nextConfig = {
     images: {
         formats: ['image/avif', 'image/webp'],
         domains: ['jungjung261.blob.core.windows.net'],
-    },
+    }
 };
 
 module.exports = nextConfig;

@@ -43,7 +43,7 @@ const Header = () => {
                         priority
                     />
                 </div >
-                <h1 className={cookie_font.className}>JSound</h1>
+                <h1 className={cookie_font.className}>Dzung dz</h1>
             </Link>
 
             <div className='header-search header-item'>
