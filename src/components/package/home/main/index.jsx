@@ -60,6 +60,7 @@ const MainPage = () => {
                                 <div className='slide-item'>
                                     <Image
                                         src={item.img}
+                                        srcSet={item.img}
                                         alt=''
                                         width='0'
                                         height='0'
