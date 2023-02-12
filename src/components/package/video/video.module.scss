@@ -5,6 +5,12 @@
     background: linear-gradient(to bottom, #ebc0fd 0%, #d9ded8 100%);
     // position: relative;
 
+    // :global .fullscreen {
+    //     .btn-exit {
+    //         display: none;
+    //     }
+    // }
+
     :global .fullscreen-enabled {
         .video-container {
             img {
@@ -17,6 +23,14 @@
                 width: 93%;
             }
         }
+
+        .video-container {
+            img {
+                filter: blur(30px) !important;
+            }
+        }
+
+        .exit-btn {display: flex !important;}
     }
 
     :global .video-container {
@@ -108,6 +122,30 @@
                         pointer-events: none;
                     }
                 }
+            }
+        }
+
+        .exit-btn {
+            display: none; 
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid transparent;
+            background-color: var.$primary_color;
+            color: #fff;
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            transition: all 0.3s ease-in-out;
+            animation: circle 1.5s ease 1;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #fff;
+                border: 1px solid var.$primary_color;
+                color: var.$primary_color;
             }
         }
     }

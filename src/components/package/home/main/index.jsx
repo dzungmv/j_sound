@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import data from '@/components/common/data/data.json';
+import slide from '@/components/common/data/slide.json';
 
 import styles from './main.module.scss';
 import { useEffect, useState } from 'react';
@@ -55,20 +56,22 @@ const MainPage = () => {
                             spaceBetween: 30,
                         },
                     }}>
-                    {data_slider.map((item) => {
+                    {slide.map((item) => {
                         return (
                             <SwiperSlide key={item.id}>
-                                <div className='slide-item'>
-                                    <Image
-                                        src={item.img}
-                                        // srcSet={item.img}
-                                        alt=''
-                                        width='0'
-                                        height='0'
-                                        sizes='100vw'
-                                        priority
-                                    />
-                                </div>
+                                <Link href={`trending/${item.url}`} passHref>
+                                    <div className='slide-item'>
+                                        <Image
+                                            src={item.img}
+                                            // srcSet={item.img}
+                                            alt=''
+                                            width='0'
+                                            height='0'
+                                            sizes='100vw'
+                                            priority
+                                        />
+                                    </div>
+                                </Link>
                             </SwiperSlide>
                         );
                     })}
@@ -112,24 +115,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
-const data_slider = [
-    {
-        id: 1,
-        title: 'Chill music',
-        img: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/slider/chill.jpg',
-        url: '/chill-music',
-    },
-    {
-        id: 2,
-        title: 'Lofi music',
-        img: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/slider/lofi.jpg',
-        url: '/lofi-music',
-    },
-    {
-        id: 3,
-        title: 'Jazz music',
-        img: 'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/slider/chill2.jpg',
-        url: '/jazz-music',
-    },
-];

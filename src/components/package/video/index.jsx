@@ -43,46 +43,6 @@ const Video = ({ data }) => {
 
     return (
         <div className={styles.wrapperVideo}>
-            {/* <div className='video-container'>
-                <img src={data?.thumbnail || ''} alt='' loading='lazy' />
-                <div className='video'>
-                    {data ? (
-                        <iframe
-                            key={data?.id || ''}
-                            src={data?.link || ''}
-                            frameBorder='0'
-                            allowFullScreen='allowfullscreen'
-                            mozallowfullscreen='mozallowfullscreen'
-                            msallowfullscreen='msallowfullscreen'
-                            oallowfullscreen='oallowfullscreen'
-                            webkitallowfullscreen='webkitallowfullscreen'
-                            allow='autoplay; fullscreen; picture-in-picture'
-                        />
-                    ) : (
-                        <div className='video-not-found'>
-                            <header>
-                                <div className='header-item'></div>
-                                <div className='header-item'></div>
-                                <div className='header-item'></div>
-                            </header>
-
-                            <div className='video-not-found-img'>
-                                <Image
-                                    src={
-                                        'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/404.png'
-                                    }
-                                    alt=''
-                                    width='0'
-                                    height='0'
-                                    fill={false}
-                                    sizes='100vw'
-                                />
-                            </div>
-                        </div>
-                    )}
-                </div>
-            </div> */}
-
             <FullScreen handle={handleFullScreen}>
                 <div className='video-container'>
                     {/* <svg style={{ display: 'none' }}>
@@ -138,6 +98,10 @@ const Video = ({ data }) => {
                             </div>
                         )}
                     </div>
+
+                    <div className='exit-btn' onClick={handleFullScreen.exit}>
+                        <i className='fa-solid fa-arrow-right-from-bracket'></i>
+                    </div>
                 </div>
             </FullScreen>
 
@@ -183,8 +147,7 @@ const Video = ({ data }) => {
                                     // href={`/video/${item.id}`}
                                     onClick={() => {
                                         router.push(`/watch/${item.slug}`);
-                                    }}
-                                >
+                                    }}>
                                     <div className='item-img'>
                                         <Image
                                             src={item.thumbnail}

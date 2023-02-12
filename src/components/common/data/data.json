@@ -19,7 +19,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/duongchantroi.jpg",
         "link": "https://www.youtube.com/embed/4stzqTzSDs0",
         "view": 1000,
-        "type": ["mood", "chill"]
+        "type": ["mood", "chill"],
+        "trending": "vita-mood"
     },
     {
         "id": 3,
@@ -76,7 +77,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/viemlacongai.jpg",
         "link": "https://www.youtube.com/embed/6aqjeMep6as",
         "view": 1000,
-        "type": ["mood", "chill"]
+        "type": ["mood", "chill"],
+        "trending": "vita-mood"
     },
     {
         "id": 8,
@@ -98,7 +100,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi1.jpg",
         "link": "https://www.youtube.com/embed/KHe0BPLkie8",
         "view": 1000,
-        "type": ["lofi", "mood", "chill"]
+        "type": ["lofi", "mood", "chill"],
+        "trending": "lofi-music"
     },
     {
         "id": 10,
@@ -109,7 +112,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi2.jpg",
         "link": "https://www.youtube.com/embed/GifeSespCYQ",
         "view": 1000,
-        "type": ["lofi", "mood", "chill"]
+        "type": ["lofi", "mood", "chill"],
+        "trending": "lofi-music"
     },
     {
         "id": 11,
@@ -120,7 +124,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/yolo.jpg",
         "link": "https://www.youtube.com/embed/iwFK_qjCDSQ",
         "view": 1000,
-        "type": ["lofi", "mood", "chill"]
+        "type": ["lofi", "mood", "chill"],
+        "trending": "lofi-music"
     },
     {
         "id": 12,
@@ -230,7 +235,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi3.jpg",
         "link": "https://www.youtube.com/embed/a76ttVyzx_A",
         "view": 1000,
-        "type": ["mood", "chill", "lofi", "study"]
+        "type": ["mood", "chill", "lofi", "study"],
+        "trending": "lofi-music"
     },
     {
         "id": 22,
@@ -241,7 +247,8 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi4.jpg",
         "link": "https://www.youtube.com/embed/9FvvbVI5rYA",
         "view": 1000,
-        "type": ["mood", "chill", "lofi", "study"]
+        "type": ["mood", "chill", "lofi", "study"],
+        "trending": "lofi-music"
     },
     {
         "id": 23,
@@ -252,6 +259,163 @@
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi5.jpg",
         "link": "https://www.youtube.com/embed/HGl75kurxok",
         "view": 1000,
-        "type": ["mood", "chill", "lofi", "study"]
+        "type": ["mood", "chill", "lofi", "study"],
+        "trending": "lofi-music"
+    },
+    {
+        "id": 24,
+        "name": "TẬP THỂ DỤC",
+        "slug": "tap-the-duc",
+        "author": "Kiên Trịnh",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/kien.jpeg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/taptheduc.jpeg",
+        "link": "https://www.youtube.com/embed/zBpC8JuI5Vw",
+        "view": 1000,
+        "type": ["mood", "chill"],
+        "trending": "vita-mood"
+    },
+    {
+        "id": 25,
+        "name": "Love 1216",
+        "slug": "love-1216",
+        "author": "Thịnh Suy",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/thinhsuy.jpeg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/love1216.jpeg",
+        "link": "https://www.youtube.com/embed/04rwUr44vxQ",
+        "view": 1000,
+        "type": ["mood", "chill"],
+        "trending": "vita-mood"
+    },
+    {
+        "id": 26,
+        "name": "I Fall In Luv With You",
+        "slug": "i-fall-in-luv-with-you",
+        "author": "Lofi",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/ifallinlovewithu.jpeg",
+        "link": "https://www.youtube.com/embed/04rwUr44vxQ",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 27,
+        "name": "Bloom",
+        "slug": "bloom",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/bloom.jpeg",
+        "link": "https://www.youtube.com/embed/bHtW5RxaiFY",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 28,
+        "name": "Like we use to",
+        "slug": "like-we-use-to",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/likeweuseto.jpeg",
+        "link": "https://www.youtube.com/embed/uPAGycnQsus",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 29,
+        "name": "Breeze",
+        "slug": "breeze",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/breeze.jpeg",
+        "link": "https://www.youtube.com/embed/gmipKtLMrQE",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 30,
+        "name": "Violet",
+        "slug": "violet",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/violet.jpeg",
+        "link": "https://www.youtube.com/embed/ntHvbR2c4E0",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 31,
+        "name": "Take care",
+        "slug": "take-care",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/takecare.jpeg",
+        "link": "https://www.youtube.com/embed/C9paRdqbTGo",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 32,
+        "name": "Butterflies",
+        "slug": "butterflies",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/butterflies.jpeg",
+        "link": "https://www.youtube.com/embed/vkfogBVo1TQ",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 33,
+        "name": "Both of us",
+        "slug": "both-of-us",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/bothofus.jpeg",
+        "link": "https://www.youtube.com/embed/Djz-AXDO27Q",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 34,
+        "name": "STRAWBERRY",
+        "slug": "strawberry",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/strawberry.jpeg",
+        "link": "https://www.youtube.com/embed/XaUSGvh5dIc",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 35,
+        "name": "Mood",
+        "slug": "mood",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/mood.jpeg",
+        "link": "https://www.youtube.com/embed/4M-JWOXepho",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental", "lofi"],
+        "trending": "instrumental-mood"
+    },
+    {
+        "id": 36,
+        "name": "Du miên instrumental",
+        "slug": "du-mien-instrumental",
+        "author": "GC",
+        "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/mer.jpg",
+        "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/dumienbeat.jpeg",
+        "link": "https://www.youtube.com/embed/f1U4mX3OBW8",
+        "view": 1000,
+        "type": ["mood", "chill", "instrumental"],
+        "trending": "instrumental-mood"
     }
 ]
