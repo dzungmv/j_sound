@@ -30,7 +30,7 @@ const MainPage = () => {
                 </div>
                 <Swiper
                     modules={[Pagination, Navigation, Autoplay]}
-                    slidesPerView={3}
+                    // slidesPerView={3}
                     spaceBetween={30}
                     slidesPerGroup={1}
                     autoplay={{
@@ -39,19 +39,20 @@ const MainPage = () => {
                         pauseOnMouseEnter: true,
                     }}
                     loop={true}
-                    loopFillGroupWithBlank={true}
+                    // loopFillGroupWithBlank={true}
                     speed={500}
                     breakpoints={{
-                        425: {
+                        320: {
                             slidesPerView: 1,
+                            spaceBetween: 10,
                         },
-
                         768: {
-                            slidesPerView: 1,
+                            slidesPerView: 2,
+                            spaceBetween: 20,
                         },
-                        // when window width is >= 768px
-                        1000: {
+                        1024: {
                             slidesPerView: 3,
+                            spaceBetween: 30,
                         },
                     }}>
                     {data_slider.map((item) => {
@@ -60,12 +61,12 @@ const MainPage = () => {
                                 <div className='slide-item'>
                                     <Image
                                         src={item.img}
-                                        srcSet={item.img}
+                                        // srcSet={item.img}
                                         alt=''
                                         width='0'
                                         height='0'
                                         sizes='100vw'
-                                        // priority
+                                        priority
                                     />
                                 </div>
                             </SwiperSlide>
