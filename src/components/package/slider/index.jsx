@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styles from './slider.module.scss';
 
 const SliderPage = ({ thumb, data }) => {
-    console.log('thumb', typeof thumb?.img);
+    // console.log('thumb', typeof thumb?.img);
     return (
         <div className={styles.wrapperSliderPage}>
             <div className='info-trending'>
@@ -28,6 +28,7 @@ const SliderPage = ({ thumb, data }) => {
                 {data?.map((item) => {
                     return (
                         <Link
+                            key={item?.id}
                             href={`/watch/${item?.slug}`}
                             className='content-trending-item'>
                             <div className='content-trending-item-img'>
