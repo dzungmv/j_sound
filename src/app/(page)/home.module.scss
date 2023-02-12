@@ -25,9 +25,13 @@
     @media screen and (max-width: 600px) {
         padding: 0;
         padding-top: 66px;
+        flex-direction: column;
 
         :global .left {
-            display: none;
+            // display: ;
+            width: 100%;
+            border-radius: 0;
+            // display: flex;
         }
 
         :global .right {

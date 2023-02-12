@@ -37,4 +37,19 @@
             color: var.$primary_color;
         }
     }
+
+    @media screen and (max-width: 600px) {
+        
+        :global .sidebar { 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &-item {
+                span {
+                    display: none;
+                }
+            }
+        }
+    }
 }

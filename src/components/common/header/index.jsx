@@ -42,8 +42,8 @@ const Header = () => {
                         sizes='100vw'
                         priority
                     />
-                </div >
-                <h1 className={cookie_font.className}>Dzung dz</h1>
+                </div>
+                <h1 className={cookie_font.className}>JSound</h1>
             </Link>
 
             <div className='header-search header-item'>
@@ -66,8 +66,7 @@ const Header = () => {
                                     onClick={() => {
                                         setSearchResult('');
                                         searchRef.current.value = '';
-                                    }}
-                                >
+                                    }}>
                                     <div className='search-box-item-image'>
                                         <img src={item.thumbnail} alt='' />
                                     </div>
@@ -90,8 +89,7 @@ const Header = () => {
                     placement='bottom'
                     trigger='click'
                     arrow={false}
-                    interactive={true}
-                >
+                    interactive={true}>
                     <div className='header-option-item'>
                         <i className='fa-solid fa-gear'></i>
                     </div>
@@ -110,8 +108,7 @@ const Tooltip = () => {
                 <Link
                     href={'https://www.facebook.com/jungjung.2601/'}
                     className='content-item'
-                    target='_blank'
-                >
+                    target='_blank'>
                     <div className='content-item-label'>
                         <i className='fa-brands fa-facebook'></i>
                     </div>
