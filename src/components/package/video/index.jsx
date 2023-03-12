@@ -45,27 +45,6 @@ const Video = ({ data }) => {
         <div className={styles.wrapperVideo}>
             <FullScreen handle={handleFullScreen}>
                 <div className='video-container'>
-                    {/* <svg style={{ display: 'none' }}>
-                        <filter id='water'>
-                            <feTurbulence
-                                type='turbulence'
-                                baseFrequency='0.01 0.003'
-                            >
-                                <animate
-                                    attributeName='baseFrequency'
-                                    from='0.01 0.003'
-                                    to='0.01 0.05'
-                                    dur='10s'
-                                    repeatCount='indefinite'
-                                ></animate>
-                            </feTurbulence>
-
-                            <feDisplacementMap
-                                in='SourceGraphic'
-                                scale='20'
-                            ></feDisplacementMap>
-                        </filter>
-                    </svg> */}
                     <img src={data?.thumbnail || ''} alt='' loading='lazy' />
                     <div className='video'>
                         {data ? (
@@ -73,7 +52,7 @@ const Video = ({ data }) => {
                                 key={data?.id || ''}
                                 src={data?.link || ''}
                                 frameBorder='0'
-                                allow='picture-in-picture'
+                                allow='autoplay'
                             />
                         ) : (
                             <div className='video-not-found'>

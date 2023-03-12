@@ -6,7 +6,7 @@
         "author": "NHA",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/nha.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/kyuc.jpg",
-        "link": "https://www.youtube.com/embed/g_4Ql9JmoJ0",
+        "link": "https://www.youtube.com/embed/g_4Ql9JmoJ0?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -17,7 +17,7 @@
         "author": "Chillies",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/duongchantroi.jpg",
-        "link": "https://www.youtube.com/embed/4stzqTzSDs0",
+        "link": "https://www.youtube.com/embed/4stzqTzSDs0?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"],
         "trending": "vita-mood"
@@ -29,7 +29,7 @@
         "author": "Hoàng Dũng",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hoangdung.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/changnoinenloi.jpg",
-        "link": "https://www.youtube.com/embed/9cPJLlNwO-w",
+        "link": "https://www.youtube.com/embed/9cPJLlNwO-w?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -41,7 +41,7 @@
         "author": "Chillies",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/coemdoibongvuim.jpg",
-        "link": "https://www.youtube.com/embed/Jd3DFeKw-2A",
+        "link": "https://www.youtube.com/embed/Jd3DFeKw-2A?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -53,7 +53,7 @@
         "author": "Chillies",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/chillies.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/mascara.jpg",
-        "link": "https://www.youtube.com/embed/dIuQXmXBUpk",
+        "link": "https://www.youtube.com/embed/dIuQXmXBUpk?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -64,7 +64,7 @@
         "author": "Đức Phúc",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/ducphuc.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/cungdanhthoi.jpg",
-        "link": "https://www.youtube.com/embed/Qs-XcmaxaLw",
+        "link": "https://www.youtube.com/embed/Qs-XcmaxaLw?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -75,7 +75,7 @@
         "author": "LyLy",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lyly.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/viemlacongai.jpg",
-        "link": "https://www.youtube.com/embed/6aqjeMep6as",
+        "link": "https://www.youtube.com/embed/6aqjeMep6as?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"],
         "trending": "vita-mood"
@@ -87,7 +87,7 @@
         "author": "Amee",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/amee.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/haimuoihai-p.jpg",
-        "link": "https://www.youtube.com/embed/rThHfQhaLUs",
+        "link": "https://www.youtube.com/embed/rThHfQhaLUs?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -98,7 +98,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi1.jpg",
-        "link": "https://www.youtube.com/embed/KHe0BPLkie8",
+        "link": "https://www.youtube.com/embed/KHe0BPLkie8?autoplay=1",
         "view": 1000,
         "type": ["lofi", "mood", "chill"],
         "trending": "lofi-music"
@@ -110,7 +110,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi2.jpg",
-        "link": "https://www.youtube.com/embed/GifeSespCYQ",
+        "link": "https://www.youtube.com/embed/GifeSespCYQ?autoplay=1",
         "view": 1000,
         "type": ["lofi", "mood", "chill"],
         "trending": "lofi-music"
@@ -122,7 +122,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/yolo.jpg",
-        "link": "https://www.youtube.com/embed/iwFK_qjCDSQ",
+        "link": "https://www.youtube.com/embed/iwFK_qjCDSQ?autoplay=1",
         "view": 1000,
         "type": ["lofi", "mood", "chill"],
         "trending": "lofi-music"
@@ -134,7 +134,7 @@
         "author": "Mer",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/mer.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/giacmoratho.jpg",
-        "link": "https://www.youtube.com/embed/aA-gyqlKtrE",
+        "link": "https://www.youtube.com/embed/aA-gyqlKtrE?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -145,7 +145,7 @@
         "author": "Hayd",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hayd.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/airplanemod.jpg",
-        "link": "https://www.youtube.com/embed/blOvOaB2fUs",
+        "link": "https://www.youtube.com/embed/blOvOaB2fUs?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -156,7 +156,7 @@
         "author": "Hayd",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/hayd.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/headcloud.jpg",
-        "link": "https://www.youtube.com/embed/-uFQzcY7YHc",
+        "link": "https://www.youtube.com/embed/-uFQzcY7YHc?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -167,7 +167,7 @@
         "author": "buitruonglinh",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/buitruonglinh.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/yeunguoicouocmo.jpg",
-        "link": "https://www.youtube.com/embed/6r7jzy1LABY",
+        "link": "https://www.youtube.com/embed/6r7jzy1LABY?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -178,7 +178,7 @@
         "author": "Rex Orange County",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/rexorange.jpeg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/plutoproject.jpg",
-        "link": "https://www.youtube.com/embed/Pi9J4epTWGM",
+        "link": "https://www.youtube.com/embed/Pi9J4epTWGM?autoplay=1",
         "view": 1000,
         "type": ["sadness"]
     },
@@ -189,7 +189,7 @@
         "author": "Rex Orange County",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/rexorange.jpeg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/amazing.jpg",
-        "link": "https://www.youtube.com/embed/ZmtNSspTkmM",
+        "link": "https://www.youtube.com/embed/ZmtNSspTkmM?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -200,7 +200,7 @@
         "author": "Rex Orange County",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/rexorange.jpeg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lovingeasy.jpg",
-        "link": "https://www.youtube.com/embed/bPy3hQlqCZs",
+        "link": "https://www.youtube.com/embed/bPy3hQlqCZs?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -211,7 +211,7 @@
         "author": "Mer",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/mer.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/dumien.jpeg",
-        "link": "https://www.youtube.com/embed/PS7ecAcXml4",
+        "link": "https://www.youtube.com/embed/PS7ecAcXml4?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -222,7 +222,7 @@
         "author": "JVKE",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/fallinlovefeellike.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/fallinlovefeellike.jpg",
-        "link": "https://www.youtube.com/embed/BOyO8sZOaOQ",
+        "link": "https://www.youtube.com/embed/BOyO8sZOaOQ?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"]
     },
@@ -233,7 +233,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi3.jpg",
-        "link": "https://www.youtube.com/embed/a76ttVyzx_A",
+        "link": "https://www.youtube.com/embed/a76ttVyzx_A?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "lofi", "study"],
         "trending": "lofi-music"
@@ -245,7 +245,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi4.jpg",
-        "link": "https://www.youtube.com/embed/9FvvbVI5rYA",
+        "link": "https://www.youtube.com/embed/9FvvbVI5rYA?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "lofi", "study"],
         "trending": "lofi-music"
@@ -257,7 +257,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/lofi5.jpg",
-        "link": "https://www.youtube.com/embed/HGl75kurxok",
+        "link": "https://www.youtube.com/embed/HGl75kurxok?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "lofi", "study"],
         "trending": "lofi-music"
@@ -269,7 +269,7 @@
         "author": "Kiên Trịnh",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/kien.jpeg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/taptheduc.jpeg",
-        "link": "https://www.youtube.com/embed/zBpC8JuI5Vw",
+        "link": "https://www.youtube.com/embed/zBpC8JuI5Vw?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"],
         "trending": "vita-mood"
@@ -281,7 +281,7 @@
         "author": "Thịnh Suy",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/thinhsuy.jpeg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/love1216.jpeg",
-        "link": "https://www.youtube.com/embed/04rwUr44vxQ",
+        "link": "https://www.youtube.com/embed/04rwUr44vxQ?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill"],
         "trending": "vita-mood"
@@ -293,7 +293,7 @@
         "author": "Lofi",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/lofi.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/ifallinlovewithu.jpeg",
-        "link": "https://www.youtube.com/embed/04rwUr44vxQ",
+        "link": "https://www.youtube.com/embed/04rwUr44vxQ?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental"],
         "trending": "instrumental-mood"
@@ -305,7 +305,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/bloom.jpeg",
-        "link": "https://www.youtube.com/embed/bHtW5RxaiFY",
+        "link": "https://www.youtube.com/embed/bHtW5RxaiFY?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -317,7 +317,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/likeweuseto.jpeg",
-        "link": "https://www.youtube.com/embed/uPAGycnQsus",
+        "link": "https://www.youtube.com/embed/uPAGycnQsus?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -329,7 +329,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/breeze.jpeg",
-        "link": "https://www.youtube.com/embed/gmipKtLMrQE",
+        "link": "https://www.youtube.com/embed/gmipKtLMrQE?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -341,7 +341,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/violet.jpeg",
-        "link": "https://www.youtube.com/embed/ntHvbR2c4E0",
+        "link": "https://www.youtube.com/embed/ntHvbR2c4E0?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -353,7 +353,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/takecare.jpeg",
-        "link": "https://www.youtube.com/embed/C9paRdqbTGo",
+        "link": "https://www.youtube.com/embed/C9paRdqbTGo?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -365,7 +365,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/butterflies.jpeg",
-        "link": "https://www.youtube.com/embed/vkfogBVo1TQ",
+        "link": "https://www.youtube.com/embed/vkfogBVo1TQ?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -377,7 +377,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/bothofus.jpeg",
-        "link": "https://www.youtube.com/embed/Djz-AXDO27Q",
+        "link": "https://www.youtube.com/embed/Djz-AXDO27Q?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -389,7 +389,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/strawberry.jpeg",
-        "link": "https://www.youtube.com/embed/XaUSGvh5dIc",
+        "link": "https://www.youtube.com/embed/XaUSGvh5dIc?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -401,7 +401,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/gc.png",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/mood.jpeg",
-        "link": "https://www.youtube.com/embed/4M-JWOXepho",
+        "link": "https://www.youtube.com/embed/4M-JWOXepho?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental", "lofi"],
         "trending": "instrumental-mood"
@@ -413,7 +413,7 @@
         "author": "GC",
         "author_img": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/artrist/mer.jpg",
         "thumbnail": "https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/thumbnail/dumienbeat.jpeg",
-        "link": "https://www.youtube.com/embed/f1U4mX3OBW8",
+        "link": "https://www.youtube.com/embed/f1U4mX3OBW8?autoplay=1",
         "view": 1000,
         "type": ["mood", "chill", "instrumental"],
         "trending": "instrumental-mood"

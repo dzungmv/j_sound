@@ -18,8 +18,12 @@ const NotFoundPage = () => {
                         src={
                             'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/404.png'
                         }
-                        alt=''
-                        layout='fill'
+                        alt='Not found'
+                        width='0'
+                        height='0'
+                        sizes='100vw'
+                        priority
+                        fill={false}
                     />
                 </div>
             </div>
