@@ -1,16 +1,24 @@
 .wrapperMainPage {
-    :global .slide {
-        &-title {
-            font-size: 18px;
-            font-weight: 500;
-
-            color: rgba(22, 24, 35, 0.7);
+    :global .slide-user {
+        margin-bottom: 32px;
+        &--title {
+            font-size: 32px;
+            line-height: 1.2;
+            font-weight: 400;
+            margin-bottom: 16px;
+            text-align: center;
         }
 
-        &-item {
-            transition: 0.7s;
-            height: 200px;
+        .lottie {
+            height: 250px;
+            position: relative;
+        }
+
+        &--item {
+            width: 100%;
+            height: 300px;
             border-radius: 8px !important;
+            transition: all 0.5s ease-in-out;
 
             &:hover {
                 cursor: pointer;
@@ -24,25 +32,6 @@
                 height: 100%;
                 object-fit: cover;
             }
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-            padding-bottom: 32px;
-        }
-
-        .swiper-slide,
-        .swiper-slide-prev,
-        .swiper-slide-active {
-            transition: all 0.5s ease-in-out;
-            transform: scale(0.9);
-            border-radius: 8px;
-        }
-
-        .swiper-slide-next {
-            transition: all 0.5s ease-in-out;
-            transform: scale(0.98);
         }
     }
 
@@ -63,7 +52,7 @@
         }
 
         &-item {
-            width: calc(100% / 4 - 18px);
+            width: calc(100% / 4 - 15px);
             height: 150px;
             border-radius: 15px;
             position: relative;

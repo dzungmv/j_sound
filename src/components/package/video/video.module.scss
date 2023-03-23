@@ -30,14 +30,16 @@
             }
         }
 
-        .exit-btn {display: flex !important;}
+        .exit-btn {
+            display: flex !important;
+        }
     }
 
     :global .video-container {
         width: 100%;
         // height: 471px;
         position: relative;
-        margin-bottom: 100px;
+        margin-bottom: 150px;
 
         img {
             width: 100%;
@@ -56,7 +58,7 @@
             overflow: hidden;
             margin: 0 auto;
             border-radius: 16px;
-            margin-top: 70px;
+            margin-top: 90px;
             padding: 32px;
             // z-index: 100;
 
@@ -126,7 +128,7 @@
         }
 
         .exit-btn {
-            display: none; 
+            display: none;
             align-items: center;
             justify-content: center;
             width: 40px;

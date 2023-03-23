@@ -17,15 +17,14 @@ const MelancholicPage = ({ data }) => {
                         <Link
                             href={`/watch/${item.slug}`}
                             key={item.id}
-                            className='item'
-                        >
+                            className='item'>
                             <Image
                                 src={item.thumbnail}
                                 alt=''
                                 width='0'
                                 height='0'
                                 sizes='100vw'
-                                fill={false}
+                                //fill='false'
                             />
                             <div className='item-info'>
                                 <div className='item-info-song'>

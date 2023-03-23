@@ -124,7 +124,7 @@ const Tooltip = () => {
                         width='0'
                         height='0'
                         sizes='100vw'
-                        fill={false}
+                        // fill='false'
                     />
                     <span> Jsound</span>
                 </div>

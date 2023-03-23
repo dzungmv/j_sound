@@ -15,6 +15,7 @@ const SliderPage = ({ thumb, data }) => {
                             width='0'
                             height='0'
                             sizes='100vw'
+                            //fill='false'
                         />
                     ) : (
                         ''
@@ -39,6 +40,7 @@ const SliderPage = ({ thumb, data }) => {
                                         width='0'
                                         height='0'
                                         sizes='100vw'
+                                        //fill='false'
                                     />
                                 ) : null}
 

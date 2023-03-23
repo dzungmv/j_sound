@@ -39,8 +39,7 @@
     }
 
     @media screen and (max-width: 600px) {
-        
-        :global .sidebar { 
+        :global .sidebar {
             display: flex;
             justify-content: space-between;
             align-items: center;

@@ -23,7 +23,7 @@ const NotFoundPage = () => {
                         height='0'
                         sizes='100vw'
                         priority
-                        fill={false}
+                        //fill='false'
                     />
                 </div>
             </div>
