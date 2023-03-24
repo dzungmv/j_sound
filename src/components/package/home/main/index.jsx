@@ -5,7 +5,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Zoom from 'react-reveal/Zoom';
+import { Zoom } from 'react-awesome-reveal';
 
 import styles from './main.module.scss';
 
@@ -21,7 +21,7 @@ const MainPage = (data) => {
 
     useEffect(() => {
         setFinalData(randomItem(songs));
-    }, []);
+    }, [songs]);
 
     return (
         <main className={styles.wrapperMainPage}>
@@ -29,11 +29,11 @@ const MainPage = (data) => {
                 <div className='lottie'>
                     <header className='header'>
                         <h1 className='slide-user--title'>
-                            <Zoom left cascade>
+                            <Zoom direction='left' cascade duration={100}>
                                 Wellcome to Jsound!
                             </Zoom>
-                            <Zoom right cascade>
-                                Make your your day with music!
+                            <Zoom duration={100} direction='up' cascade={true}>
+                                Make your day with music!
                             </Zoom>
                         </h1>
                     </header>

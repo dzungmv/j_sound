@@ -4,7 +4,18 @@ const nextConfig = {
         forceSwcTransforms: true,
         appDir: true,
     },
-    reactStrictMode: false,
+    reactStrictMode: true,
+    productionBrowserSourceMaps: true,
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.fallback = {
+                fs: false,
+                module: false,
+            };
+        }
+
+        return config;
+    },
     images: {
         formats: ['image/avif', 'image/webp'],
         domains: ['jungjung261.blob.core.windows.net'],

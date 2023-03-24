@@ -30,7 +30,7 @@ const SliderPage = ({ thumb, data }) => {
                     return (
                         <Link
                             key={item?.id}
-                            href={`/watch/${item?.slug}`}
+                            href={`/${item?.slug}`}
                             className='content-trending-item'>
                             <div className='content-trending-item-img'>
                                 {item?.thumbnail ? (
