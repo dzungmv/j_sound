@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './lofi.module.scss';
 
 const LofiPage = ({ data }) => {
+    if (!data) return <p>Loading...</p>;
     return (
         <div className={styles.wrapperChill}>
             <h3>Lofi music</h3>

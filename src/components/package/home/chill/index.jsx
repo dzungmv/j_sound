@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './chill.module.scss';
 
 const ChillPage = ({ data }) => {
+    if (!data) return <p>Loading...</p>;
     return (
         <div className={styles.wrapperChill}>
             <h3>Chill music</h3>

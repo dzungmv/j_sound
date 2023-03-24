@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './study.module.scss';
 
 const StudyPage = ({ data }) => {
+    if (!data) return <p>Loading...</p>;
     return (
         <div className={styles.wrapperChill}>
             <h3>Melancholic music</h3>
