@@ -31,7 +31,8 @@ const MainPage = (data) => {
                         <h1 className='slide-user--title'>
                             <Zoom direction='left' cascade duration={100}>
                                 Wellcome to Jsound!
-                            </Zoom>
+                            </Zoom>{' '}
+                            <br />
                             <Zoom duration={100} direction='up' cascade={true}>
                                 Make your day with music!
                             </Zoom>
