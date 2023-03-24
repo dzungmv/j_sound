@@ -1,31 +1,31 @@
-'use client';
-import Header from '@/components/common/header';
+// 'use client';
+// import Header from '@/components/common/header';
 import EmptyLayout from '@/components/layouts/empty';
 import MainLayout from '@/components/layouts/main';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import './styles/globals.scss';
 
 export default function RootLayout({ children }) {
-    const [offline, setOffline] = useState(false);
-    const [online, setOnline] = useState(false);
+    // const [offline, setOffline] = useState(false);
+    // const [online, setOnline] = useState(false);
     const Layout = MainLayout || EmptyLayout;
 
-    useEffect(() => {
-        const handleOffline = () => {
-            setOffline(true);
-            setOnline(false);
-        };
-        const handleOnline = () => {
-            setOffline(false);
-            setOnline(true);
-        };
-        window.addEventListener('offline', handleOffline);
-        window.addEventListener('online', handleOnline);
-        return () => {
-            window.removeEventListener('offline', handleOffline);
-            window.removeEventListener('online', handleOnline);
-        };
-    }, []);
+    // useEffect(() => {
+    //     const handleOffline = () => {
+    //         setOffline(true);
+    //         setOnline(false);
+    //     };
+    //     const handleOnline = () => {
+    //         setOffline(false);
+    //         setOnline(true);
+    //     };
+    //     window.addEventListener('offline', handleOffline);
+    //     window.addEventListener('online', handleOnline);
+    //     return () => {
+    //         window.removeEventListener('offline', handleOffline);
+    //         window.removeEventListener('online', handleOnline);
+    //     };
+    // }, []);
     return (
         <html lang='en'>
             <head>
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
                 {/* <Header /> */}
                 <Layout>{children}</Layout>
 
-                {offline && (
+                {/* {offline && (
                     <div className='notify offline'>
                         <i className='fa-solid fa-wifi-slash'></i>
                         <span>Please check your connection!</span>
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
                             <i className='fa-solid fa-times'></i>
                         </div>
                     </div>
-                )}
+                )} */}
             </body>
         </html>
     );

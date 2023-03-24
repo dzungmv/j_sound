@@ -14,7 +14,6 @@ const itimFont = Itim({
 });
 
 const Video = ({ song, allSongs }) => {
-    console.log('songs', allSongs);
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];

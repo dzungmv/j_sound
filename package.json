@@ -10,7 +10,6 @@
     },
     "dependencies": {
         "@lottiefiles/react-lottie-player": "^3.5.3",
-        "@next/font": "^13.1.5",
         "@tippyjs/react": "^4.2.6",
         "eslint": "8.32.0",
         "eslint-config-next": "^13.2.4",
