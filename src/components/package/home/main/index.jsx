@@ -10,7 +10,7 @@ import Zoom from 'react-reveal/Zoom';
 import styles from './main.module.scss';
 
 const MainPage = (data) => {
-    if (!data) return <p>Loading...</p>;
+    // if (!data) return <p>Loading...</p>;
     const songs = data?.data?.data;
 
     const [finalData, setFinalData] = useState([]);
