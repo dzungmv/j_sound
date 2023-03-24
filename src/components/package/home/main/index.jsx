@@ -5,12 +5,13 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-import data from '@/components/common/data/data.json';
+import Zoom from 'react-reveal/Zoom';
 
 import styles from './main.module.scss';
 
-const MainPage = () => {
+const MainPage = (data) => {
+    const songs = data?.data?.data;
+
     const [finalData, setFinalData] = useState([]);
 
     const randomItem = (arr) => {
@@ -18,20 +19,23 @@ const MainPage = () => {
     };
 
     useEffect(() => {
-        setFinalData(randomItem(data));
+        setFinalData(randomItem(songs));
     }, []);
 
     return (
         <main className={styles.wrapperMainPage}>
             <div className='slide-user'>
-                <header>
-                    <h1 className='slide-user--title'>
-                        Wellcome to <strong>Jsound</strong> ! Make your your day
-                        with music!
-                    </h1>
-                </header>
-
                 <div className='lottie'>
+                    <header className='header'>
+                        <h1 className='slide-user--title'>
+                            <Zoom left cascade>
+                                Wellcome to Jsound!
+                            </Zoom>
+                            <Zoom right cascade>
+                                Make your your day with music!
+                            </Zoom>
+                        </h1>
+                    </header>
                     <Player
                         src={
                             'https://assets10.lottiefiles.com/private_files/lf30_9x27DY.json'
@@ -49,23 +53,24 @@ const MainPage = () => {
                         finalData.map((item) => {
                             return (
                                 <Link
-                                    key={item.id}
+                                    key={item._id}
                                     className='content-item'
                                     href={`/watch/${item.slug}`}>
                                     <Image
-                                        src={item.thumbnail}
+                                        src={item.song_thumbnail}
                                         alt=''
                                         width='0'
                                         height='0'
                                         sizes='100vw'
                                         //fill='false'
+                                        priority
                                     />
                                     <div className='content-item-info'>
                                         <div className='content-item-info-song'>
                                             {item.name}
                                         </div>
                                         <div className='content-item-info-auth'>
-                                            {item.author}
+                                            {item.artist}
                                         </div>
                                     </div>
                                 </Link>

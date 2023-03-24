@@ -1,16 +1,21 @@
-'use client';
-import data from '@/components/common/data/data.json';
+// import LofiPage from '@/components/package/home/lofi';
+
 import LofiPage from '@/components/package/home/lofi';
-import dynamic from 'next/dynamic';
 
-// const LofiPage = dynamic(() => import('@/components/package/home/lofi'), {
-//     ssr: false,
-// });
+export const metadata = {
+    title: 'Lofi',
+};
 
-export default function Page() {
+export default async function Page() {
+    const res = await fetch(`${process.env.API_URL}/song/lofi`);
+
+    const data = await res.json();
+
+    const lofiSongs = data.data;
+
     return (
         <>
-            <LofiPage data={data} />
+            <LofiPage data={lofiSongs} />
         </>
     );
 }

@@ -21,7 +21,6 @@ export default function Head() {
                 href='https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/j-brand.svg'
             />
 
-            <title>{seo.description}</title>
             <meta name='title' content={seo.title} />
             <meta name='description' content={seo.description} />
 

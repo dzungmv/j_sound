@@ -4,22 +4,18 @@ import Link from 'next/link';
 import styles from './study.module.scss';
 
 const StudyPage = ({ data }) => {
-    const chilldata = data.filter(
-        (item) => item.type.filter((item) => item === 'study').length > 0
-    );
-
     return (
         <div className={styles.wrapperChill}>
             <h3>Melancholic music</h3>
             <div className='content'>
-                {chilldata.map((item) => {
+                {data.map((item) => {
                     return (
                         <Link
                             href={`/watch/${item.slug}`}
-                            key={item.id}
+                            key={item._id}
                             className='item'>
                             <Image
-                                src={item.thumbnail}
+                                src={item.song_thumbnail}
                                 alt=''
                                 width='0'
                                 height='0'
@@ -31,7 +27,7 @@ const StudyPage = ({ data }) => {
                                     {item.name}
                                 </div>
                                 <div className='item-info-auth'>
-                                    {item.author}
+                                    {item.asrtist}
                                 </div>
                             </div>
                         </Link>

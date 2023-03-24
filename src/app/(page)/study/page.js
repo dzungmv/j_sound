@@ -1,15 +1,13 @@
-'use client';
-import data from '@/components/common/data/data.json';
-import dynamic from 'next/dynamic';
 import StudyPage from '@/components/package/home/study';
-// const StudyPage = dynamic(() => import('@/components/package/home/study'), {
-//     ssr: false,
-// });
 
-export default function Page() {
+export default async function Page() {
+    const res = await fetch(`${process.env.API_URL}/song/study`);
+    const data = await res.json();
+    const studySongs = data.data;
+
     return (
         <>
-            <StudyPage data={data} />
+            <StudyPage data={studySongs} />
         </>
     );
 }

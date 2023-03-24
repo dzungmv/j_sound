@@ -2,7 +2,7 @@
 'use client';
 import { useState, useRef } from 'react';
 import Image from 'next/image';
-import { Cookie } from '@next/font/google';
+import { Cookie } from 'next/font/google';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';

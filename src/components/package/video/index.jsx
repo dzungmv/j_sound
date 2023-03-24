@@ -1,27 +1,28 @@
 /* eslint-disable @next/next/no-img-element */
-
-import { Itim } from '@next/font/google';
-import styles from './video.module.scss';
-import data_more from '@/components/common/data/data.json';
-import { useRouter } from 'next/navigation';
+'use client';
+import { Itim } from 'next/font/google';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
+
+import styles from './video.module.scss';
 
 const itimFont = Itim({
     weight: ['400'],
     subsets: ['vietnamese', 'latin'],
 });
 
-const Video = ({ data }) => {
+const Video = ({ song, allSongs }) => {
+    console.log('songs', allSongs);
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
 
     const handleFullScreen = useFullScreenHandle();
 
-    data_more.forEach((item) => {
-        item.id === data?.id
+    allSongs.forEach((item) => {
+        item._id === song?._id
             ? isVideoPlaying.push(item)
             : anotherVideo.push(item);
     });
@@ -45,12 +46,16 @@ const Video = ({ data }) => {
         <div className={styles.wrapperVideo}>
             <FullScreen handle={handleFullScreen}>
                 <div className='video-container'>
-                    <img src={data?.thumbnail || ''} alt='' loading='lazy' />
+                    <img
+                        src={song?.song_thumbnail || ''}
+                        alt=''
+                        loading='lazy'
+                    />
                     <div className='video'>
-                        {data ? (
+                        {song ? (
                             <iframe
-                                key={data?.id || ''}
-                                src={data?.link || ''}
+                                key={song?._id || ''}
+                                src={song?.song_url || ''}
                                 frameBorder='0'
                                 allow='autoplay'
                             />
@@ -70,7 +75,6 @@ const Video = ({ data }) => {
                                         alt=''
                                         width='0'
                                         height='0'
-                                        // fill='false'
                                         sizes='100vw'
                                     />
                                 </div>
@@ -89,11 +93,11 @@ const Video = ({ data }) => {
             </div>
 
             <div className='content'>
-                {data ? (
+                {song ? (
                     <div className='content-left'>
                         <div className='auth-img'>
                             <Image
-                                src={data?.author_img || ''}
+                                src={song?.artist_avatar || ''}
                                 alt=''
                                 width='0'
                                 height='0'
@@ -103,9 +107,9 @@ const Video = ({ data }) => {
                         </div>
                         <div className='auth-info'>
                             <span className={itimFont.className}>
-                                {data?.name}
+                                {song?.name}
                             </span>
-                            <div className='auth-name'>{data?.author}</div>
+                            <div className='auth-name'>{song?.artist}</div>
                         </div>
                     </div>
                 ) : null}
@@ -118,18 +122,18 @@ const Video = ({ data }) => {
 
                                 <div
                                     className={
-                                        item.id === data?.id
+                                        item._id === song?._id
                                             ? 'item active'
                                             : 'item'
                                     }
-                                    key={item.id}
+                                    key={item._id}
                                     // href={`/video/${item.id}`}
                                     onClick={() => {
                                         router.push(`/watch/${item.slug}`);
                                     }}>
                                     <div className='item-img'>
                                         <Image
-                                            src={item.thumbnail}
+                                            src={item.song_thumbnail}
                                             alt=''
                                             width='0'
                                             height='0'
@@ -143,14 +147,15 @@ const Video = ({ data }) => {
                                                 {item.name}
                                             </div>
                                             <div className='item-info-auth'>
-                                                {item.author}
+                                                {item.artist}
                                             </div>
                                         </div>
 
                                         <div className='item-info-type'>
-                                            <span className={item.type[0]}>
+                                            <span
+                                                className={item.song_types[0]}>
                                                 {' '}
-                                                {item.type[0]}
+                                                {item.song_types[0]}
                                             </span>
                                         </div>
                                     </div>

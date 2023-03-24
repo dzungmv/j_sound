@@ -1,16 +1,14 @@
-'use client';
-import data from '@/components/common/data/data.json';
-import dynamic from 'next/dynamic';
 import ChillPage from '@/components/package/home/chill';
 
-// const ChillPage = dynamic(() => import('@/components/package/home/chill'), {
-//     ssr: false,
-// });
+export default async function Page() {
+    const res = await fetch(`${process.env.API_URL}/song/chill`);
 
-export default function Page() {
+    const data = await res.json();
+
+    const chillSongs = data.data;
     return (
         <>
-            <ChillPage data={data} />
+            <ChillPage data={chillSongs} />
         </>
     );
 }
