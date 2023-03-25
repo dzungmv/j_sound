@@ -28,19 +28,6 @@ const Video = ({ song, allSongs }) => {
 
     finalData = [...isVideoPlaying, ...anotherVideo];
 
-    useEffect(() => {
-        const scrollTop = setTimeout(() => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth',
-            });
-        }, 800);
-
-        return () => {
-            clearTimeout(scrollTop);
-        };
-    }, [song]);
-
     if (!song || !allSongs) {
         return <p>Loading...</p>;
     }
@@ -171,5 +158,7 @@ const Video = ({ song, allSongs }) => {
         </div>
     );
 };
+
+Video.displayName = 'Video';
 
 export default Video;

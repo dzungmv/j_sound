@@ -84,4 +84,6 @@ const MainPage = (data) => {
     );
 };
 
+MainPage.displayName = 'MainPage';
+
 export default MainPage;

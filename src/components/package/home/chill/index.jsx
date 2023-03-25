@@ -39,4 +39,6 @@ const ChillPage = ({ data }) => {
     );
 };
 
+ChillPage.displayName = 'ChillPage';
+
 export default ChillPage;

@@ -39,4 +39,6 @@ const MelancholicPage = ({ data }) => {
     );
 };
 
+MelancholicPage.displayName = 'MelancholicPage';
+
 export default MelancholicPage;

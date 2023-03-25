@@ -39,4 +39,6 @@ const LofiPage = ({ data }) => {
     );
 };
 
+LofiPage.displayName = 'LofiPage';
+
 export default LofiPage;

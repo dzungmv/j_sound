@@ -39,4 +39,6 @@ const StudyPage = ({ data }) => {
     );
 };
 
+StudyPage.displayName = 'StudyPage';
+
 export default StudyPage;

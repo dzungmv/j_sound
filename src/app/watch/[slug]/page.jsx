@@ -13,6 +13,16 @@ export async function generateMetadata({ params }) {
     };
 }
 
+export async function generateStaticParams() {
+    const getSongs = await fetch(`${process.env.API_URL}/song/all-songs`);
+    const parseJsonGetAllSongs = await getSongs.json();
+    const allSongs = parseJsonGetAllSongs.data;
+
+    return allSongs.map((song) => ({
+        slug: song.slug,
+    }));
+}
+
 export default async function Page({ params }) {
     const { slug } = params;
     const getSong = await fetch(`${process.env.API_URL}/song/${slug}`);
