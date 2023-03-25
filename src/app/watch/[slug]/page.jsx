@@ -29,7 +29,9 @@ export default async function Page({ params }) {
     const parseJsonGetSong = await getSong.json();
     const song = parseJsonGetSong.data;
 
-    const getSongs = await fetch(`${process.env.API_URL}/song/all-songs`);
+    const getSongs = await fetch(`${process.env.API_URL}/song/all-songs`, {
+        cache: 'no-cache',
+    });
     const parseJsonGetAllSongs = await getSongs.json();
     const allSongs = parseJsonGetAllSongs.data;
 

@@ -5,7 +5,9 @@ export const metadata = {
 };
 
 export default async function Page() {
-    const res = await fetch(`${process.env.API_URL}/song/sadness`);
+    const res = await fetch(`${process.env.API_URL}/song/sadness`, {
+        cache: 'no-cache',
+    });
 
     const data = await res.json();
     const melancholicSongs = data.data;
