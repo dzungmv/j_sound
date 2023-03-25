@@ -3,7 +3,6 @@
 import Tippy from '@tippyjs/react';
 import { Cookie } from 'next/font/google';
 import Image from 'next/image';
-import { useRef, useState } from 'react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
 
@@ -11,6 +10,7 @@ import Link from 'next/link';
 import styles from './header.module.scss';
 
 import Clock from './clock';
+import SearchComp from './search';
 
 const cookie_font = Cookie({
     weight: ['400'],
@@ -18,9 +18,6 @@ const cookie_font = Cookie({
 });
 
 const Header = () => {
-    const searchRef = useRef(null);
-    const [searchResult, setSearchResult] = useState('');
-
     return (
         <main className={styles.wrapperHeader}>
             <Link href={'/'} className='header-logo header-item' passHref>
@@ -37,39 +34,8 @@ const Header = () => {
                 <h1 className={cookie_font.className}>JSound</h1>
             </Link>
 
-            <div className='header-search header-item'>
-                <i className='fa-solid fa-magnifying-glass'></i>
-                <input
-                    ref={searchRef}
-                    type='text'
-                    placeholder='Search songs name or singer'
-                    onChange={(e) => setSearchResult(e.target.value)}
-                />
-
-                {/* {handleSearch(searchResult).length > 0 && (
-                    <div className='search-box'>
-                        {handleSearch(searchResult).map((item) => {
-                            return (
-                                <Link
-                                    key={item.id}
-                                    href={`/watch/${item.slug}`}
-                                    className='search-box-item'
-                                    onClick={() => {
-                                        setSearchResult('');
-                                        searchRef.current.value = '';
-                                    }}>
-                                    <div className='search-box-item-image'>
-                                        <img src={item.thumbnail} alt='' />
-                                    </div>
-                                    <div className='search-box-item-info'>
-                                        <div className=''>{item.name}</div>
-                                        <div>{item.author}</div>
-                                    </div>
-                                </Link>
-                            );
-                        })}
-                    </div>
-                )} */}
+            <div className='header-search-wrapper'>
+                <SearchComp />
             </div>
 
             <div className='header-option header-item'>
