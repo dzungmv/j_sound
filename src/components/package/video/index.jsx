@@ -14,11 +14,11 @@ const itimFont = Itim({
 });
 
 const Video = ({ song, allSongs }) => {
+    const handleFullScreen = useFullScreenHandle();
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
-
-    const handleFullScreen = useFullScreenHandle();
+    const finalData = [...isVideoPlaying, ...anotherVideo];
 
     allSongs.forEach((item) => {
         item._id === song?._id
@@ -39,7 +39,9 @@ const Video = ({ song, allSongs }) => {
         };
     }, []);
 
-    const finalData = [...isVideoPlaying, ...anotherVideo];
+    if (!song || !allSongs) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div className={styles.wrapperVideo}>
