@@ -13,37 +13,20 @@ const itimFont = Itim({
     subsets: ['vietnamese', 'latin'],
 });
 
-const Video = ({ song }) => {
-    console.log('song', song);
+const Video = ({ song, allSongs }) => {
     const handleFullScreen = useFullScreenHandle();
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
-    const [allSongs, setAllSongs] = useState(null);
-    const finalData = [...isVideoPlaying, ...anotherVideo];
+    let finalData = [];
 
-    // useEffect(() => {
-    //     (async () => {
-    //         try {
-    //             const all_songs = await fetch(
-    //                 `${process.env.API_URL}/song/all-songs`
-    //             );
-    //             const parseJsonGetAllSongs = await all_songs.json();
-    //             const allSongs = parseJsonGetAllSongs.data;
+    allSongs.forEach((item) => {
+        item._id === song?._id
+            ? isVideoPlaying.push(item)
+            : anotherVideo.push(item);
+    });
 
-    //             console.log('allsong', allSongs);
-    //             setAllSongs(allSongs);
-    //         } catch (error) {
-    //             console.error(error);
-    //         }
-    //     })();
-    // }, []);
-
-    // allSongs.forEach((item) => {
-    //     item._id === song?._id
-    //         ? isVideoPlaying.push(item)
-    //         : anotherVideo.push(item);
-    // });
+    finalData = [...isVideoPlaying, ...anotherVideo];
 
     useEffect(() => {
         const scrollTop = setTimeout(() => {
@@ -58,9 +41,9 @@ const Video = ({ song }) => {
         };
     }, [song]);
 
-    // if (!song || !allSongs) {
-    //     return <p>Loading...</p>;
-    // }
+    if (!song || !allSongs) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div className={styles.wrapperVideo}>
@@ -133,7 +116,7 @@ const Video = ({ song }) => {
                         </div>
                     </div>
                 ) : null}
-                {/* <div className='content-right'>
+                <div className='content-right'>
                     <div className='content-title'>Relative</div>
                     <div className='container'>
                         {finalData.map((item) => {
@@ -183,7 +166,7 @@ const Video = ({ song }) => {
                             );
                         })}
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     );
