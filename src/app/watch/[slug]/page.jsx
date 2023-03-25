@@ -1,4 +1,6 @@
 import Video from '@/components/package/video';
+import { Suspense } from 'react';
+import Loading from './loading';
 
 export async function generateMetadata({ params }) {
     const { slug } = params;
@@ -14,19 +16,14 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
     const { slug } = params;
     const res = await fetch(`${process.env.API_URL}/song/${slug}`);
-    const all_songs = await fetch(`${process.env.API_URL}/song/all-songs`);
-    const [getSong, getAllSongs] = await Promise.all([res, all_songs]);
-
-    const parseJsonGetSong = await getSong.json();
-    const parseJsonGetAllSongs = await getAllSongs.json();
-
+    const parseJsonGetSong = await res.json();
     const song = parseJsonGetSong.data;
-
-    const allSongs = parseJsonGetAllSongs.data;
 
     return (
         <>
-            <Video song={song} allSongs={allSongs} />
+            <Suspense fallback={<Loading />}>
+                <Video song={song} />
+            </Suspense>
         </>
     );
 }

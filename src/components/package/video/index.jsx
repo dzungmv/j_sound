@@ -3,7 +3,7 @@
 import { Itim } from 'next/font/google';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 
 import styles from './video.module.scss';
@@ -13,18 +13,37 @@ const itimFont = Itim({
     subsets: ['vietnamese', 'latin'],
 });
 
-const Video = ({ song, allSongs }) => {
+const Video = ({ song }) => {
+    console.log('song', song);
     const handleFullScreen = useFullScreenHandle();
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
+    const [allSongs, setAllSongs] = useState(null);
     const finalData = [...isVideoPlaying, ...anotherVideo];
 
-    allSongs.forEach((item) => {
-        item._id === song?._id
-            ? isVideoPlaying.push(item)
-            : anotherVideo.push(item);
-    });
+    // useEffect(() => {
+    //     (async () => {
+    //         try {
+    //             const all_songs = await fetch(
+    //                 `${process.env.API_URL}/song/all-songs`
+    //             );
+    //             const parseJsonGetAllSongs = await all_songs.json();
+    //             const allSongs = parseJsonGetAllSongs.data;
+
+    //             console.log('allsong', allSongs);
+    //             setAllSongs(allSongs);
+    //         } catch (error) {
+    //             console.error(error);
+    //         }
+    //     })();
+    // }, []);
+
+    // allSongs.forEach((item) => {
+    //     item._id === song?._id
+    //         ? isVideoPlaying.push(item)
+    //         : anotherVideo.push(item);
+    // });
 
     useEffect(() => {
         const scrollTop = setTimeout(() => {
@@ -37,11 +56,11 @@ const Video = ({ song, allSongs }) => {
         return () => {
             clearTimeout(scrollTop);
         };
-    }, []);
+    }, [song]);
 
-    if (!song || !allSongs) {
-        return <p>Loading...</p>;
-    }
+    // if (!song || !allSongs) {
+    //     return <p>Loading...</p>;
+    // }
 
     return (
         <div className={styles.wrapperVideo}>
@@ -114,7 +133,7 @@ const Video = ({ song, allSongs }) => {
                         </div>
                     </div>
                 ) : null}
-                <div className='content-right'>
+                {/* <div className='content-right'>
                     <div className='content-title'>Relative</div>
                     <div className='container'>
                         {finalData.map((item) => {
@@ -164,7 +183,7 @@ const Video = ({ song, allSongs }) => {
                             );
                         })}
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     );

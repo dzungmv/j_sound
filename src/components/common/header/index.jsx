@@ -1,16 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import { useState, useRef } from 'react';
-import Image from 'next/image';
-import { Cookie } from 'next/font/google';
 import Tippy from '@tippyjs/react';
+import { Cookie } from 'next/font/google';
+import Image from 'next/image';
+import { useRef, useState } from 'react';
 import 'tippy.js/dist/tippy.css';
 import 'tippy.js/themes/light.css';
 
-import styles from './header.module.scss';
 import Link from 'next/link';
+import styles from './header.module.scss';
 
-import data from '@/components/common/data/data.json';
 import Clock from './clock';
 
 const cookie_font = Cookie({
@@ -21,14 +20,6 @@ const cookie_font = Cookie({
 const Header = () => {
     const searchRef = useRef(null);
     const [searchResult, setSearchResult] = useState('');
-
-    const handleSearch = (search) => {
-        if (!search) return [];
-
-        return data.filter((item) => {
-            return item.name.toLowerCase().includes(search.toLowerCase());
-        });
-    };
 
     return (
         <main className={styles.wrapperHeader}>
@@ -55,7 +46,7 @@ const Header = () => {
                     onChange={(e) => setSearchResult(e.target.value)}
                 />
 
-                {handleSearch(searchResult).length > 0 && (
+                {/* {handleSearch(searchResult).length > 0 && (
                     <div className='search-box'>
                         {handleSearch(searchResult).map((item) => {
                             return (
@@ -78,7 +69,7 @@ const Header = () => {
                             );
                         })}
                     </div>
-                )}
+                )} */}
             </div>
 
             <div className='header-option header-item'>
