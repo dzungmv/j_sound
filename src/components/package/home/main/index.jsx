@@ -23,17 +23,27 @@ const MainPage = (data) => {
         setFinalData(randomItem(songs));
     }, [songs]);
 
+    if (!data) return null;
+
     return (
         <main className={styles.wrapperMainPage}>
             <div className='slide-user'>
                 <div className='lottie'>
                     <header className='header'>
                         <h1 className='slide-user--title'>
-                            <Zoom direction='left' cascade duration={100}>
+                            <Zoom
+                                triggerOnce={true}
+                                direction='left'
+                                cascade
+                                duration={100}>
                                 Wellcome to Jsound!
                             </Zoom>{' '}
                             <br />
-                            <Zoom duration={100} direction='up' cascade={true}>
+                            <Zoom
+                                triggerOnce={true}
+                                duration={100}
+                                direction='up'
+                                cascade={true}>
                                 Make your day with music!
                             </Zoom>
                         </h1>

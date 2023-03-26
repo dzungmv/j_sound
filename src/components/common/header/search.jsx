@@ -58,44 +58,42 @@ const SearchComp = () => {
     }, []);
 
     return (
-        <div className={styles.wrapperSearch}>
+        <section className={styles.wrapperSearch}>
             <div
                 className={
                     searchValue && searchValue.length > 0
-                        ? 'header-search header-search--active'
-                        : 'header-search'
+                        ? 'search-input search-input--active'
+                        : 'search-input'
                 }>
                 <i className='fa-solid fa-magnifying-glass'></i>
                 <input
-                    className={
-                        searchValue && searchValue.length > 0
-                            ? 'input-active'
-                            : ''
-                    }
                     ref={searchRef}
                     type='text'
                     placeholder='Search songs name or singer'
                     onChange={(e) => setSearchValue(e.target.value)}
                 />
+            </div>
 
-                {searchValue && searchValue.length > 0 && (
-                    <div className='search-box'>
-                        {isPending ? (
-                            <div className='loading-sleketon'>
-                                <Skeleton count={4} />
-                            </div>
-                        ) : error ? (
-                            <p className='types-search'>
-                                Not found any song with search value {` `}
-                                <strong>{searchValue}</strong>
-                            </p>
-                        ) : searchResult && searchResult.length > 0 ? (
-                            searchResult.map((item) => {
-                                return (
-                                    <Link href={`/watch/${item.slug}`} passHref>
-                                        <div
-                                            key={item._id}
-                                            className='search-box-item'>
+            {searchValue && searchValue.length > 0 && (
+                <div className='search-box'>
+                    {isPending ? (
+                        <div className='loading-sleketon'>
+                            <Skeleton count={4} />
+                        </div>
+                    ) : error ? (
+                        <p className='types-search'>
+                            Not found any song with search value {` `}
+                            <strong>{searchValue}</strong>
+                        </p>
+                    ) : searchResult && searchResult.length > 0 ? (
+                        searchResult.map((item, index) => {
+                            return (
+                                index < 8 && (
+                                    <Link
+                                        key={item._id}
+                                        href={`/watch/${item.slug}`}
+                                        passHref>
+                                        <div className='search-box-item'>
                                             <div className='search-box-item-image'>
                                                 <Image
                                                     src={item.artist_avatar}
@@ -106,24 +104,26 @@ const SearchComp = () => {
                                                 />
                                             </div>
                                             <div className='search-box-item-info'>
-                                                <div className=''>
+                                                <div className='info-name'>
                                                     {item.name}
                                                 </div>
-                                                <div>{item.artist}</div>
+                                                <span>{item.artist}</span>
                                             </div>
                                         </div>
                                     </Link>
-                                );
-                            })
-                        ) : (
-                            <p>No recent searches</p>
-                        )}
-                    </div>
-                )}
-            </div>
-        </div>
+                                )
+                            );
+                        })
+                    ) : (
+                        <p>No recent searches</p>
+                    )}
+                </div>
+            )}
+        </section>
     );
 };
 
 SearchComp.displayName = 'SearchComp';
 export default SearchComp;
+
+// để xóa .next chạy lại thử
