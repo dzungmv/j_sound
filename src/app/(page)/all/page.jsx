@@ -3,7 +3,7 @@
 import AllPage from '@/components/package/home/all';
 
 export const metadata = {
-    title: 'All',
+    title: 'Discover',
 };
 
 export default async function Page() {
