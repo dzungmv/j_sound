@@ -3,25 +3,32 @@ import { Suspense } from 'react';
 import Loading from './loading';
 
 export async function generateMetadata({ params }) {
-    const { slug } = params;
-    const res = await fetch(`${process.env.API_URL}/song/${slug}`);
-    const parseJson = await res.json();
-    const song = parseJson.data;
+    try {
+        const { slug } = params;
+        const res = await fetch(`${process.env.API_URL}/song/${slug}`);
+        const parseJson = await res.json();
 
-    return {
-        title: song.name,
-    };
+        const song = parseJson.data;
+
+        return {
+            title: song.name,
+        };
+    } catch (error) {
+        return {
+            title: 'Product not found',
+        };
+    }
 }
 
-export async function generateStaticParams() {
-    const getSongs = await fetch(`${process.env.API_URL}/song/get-songs`);
-    const parseJsonGetAllSongs = await getSongs.json();
-    const allSongs = parseJsonGetAllSongs.data;
+// export async function generateStaticParams() {
+//     const getSongs = await fetch(`${process.env.API_URL}/song/get-songs`);
+//     const parseJsonGetAllSongs = await getSongs.json();
+//     const allSongs = parseJsonGetAllSongs.data;
 
-    return allSongs.map((song) => ({
-        slug: song.slug,
-    }));
-}
+//     return allSongs.map((song) => ({
+//         slug: song.slug,
+//     }));
+// }
 
 export default async function Page({ params }) {
     const { slug } = params;

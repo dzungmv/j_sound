@@ -23,6 +23,7 @@ const nextConfig = {
     env: {
         API_URL: process.env.API_URL,
     },
+    staticPageGenerationTimeout: 1000,
 };
 
 module.exports = nextConfig;
