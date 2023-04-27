@@ -4,24 +4,12 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 import { Zoom } from 'react-awesome-reveal';
 
 import styles from './main.module.scss';
 
 const MainPage = (data) => {
-    // if (!data) return <p>Loading...</p>;
     const songs = data?.data?.data;
-
-    const [finalData, setFinalData] = useState([]);
-
-    const randomItem = (arr) => {
-        return arr.sort(() => Math.random() - 0.5);
-    };
-
-    useEffect(() => {
-        setFinalData(randomItem(songs));
-    }, [songs]);
 
     if (!data) return null;
 
@@ -47,6 +35,10 @@ const MainPage = (data) => {
                                 Make your day with music!
                             </Zoom>
                         </h1>
+
+                        <Link href='/all' className='btn'>
+                            Listen now
+                        </Link>
                     </header>
                     <Player
                         src={
@@ -60,9 +52,9 @@ const MainPage = (data) => {
             <div className='content'>
                 <div className='content-title'>For you</div>
                 <div className='content-container'>
-                    {finalData &&
-                        finalData.length > 0 &&
-                        finalData.map((item) => {
+                    {songs &&
+                        songs.length > 0 &&
+                        songs.map((item) => {
                             return (
                                 <Link
                                     key={item._id}
@@ -74,7 +66,6 @@ const MainPage = (data) => {
                                         width='0'
                                         height='0'
                                         sizes='100vw'
-                                        //fill='false'
                                         priority
                                     />
                                     <div className='content-item-info'>

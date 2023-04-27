@@ -1,19 +1,70 @@
-/* eslint-disable @next/next/no-img-element */
+'use client';
+
+import axios from 'axios';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './melancholic.module.scss';
+import { useEffect, useRef, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
+import styles from './all.module.scss';
 
-const MelancholicPage = ({ data }) => {
-    if (!data) return <p>Loading...</p>;
+const MelancholicPage = () => {
+    const [songs, setSongs] = useState([]);
+    const [page, setPage] = useState(1);
+    const [hasMore, setHasMore] = useState(true);
+    const loadMoreRef = useRef(null);
+
+    const onIntersection = (entries) => {
+        const firstEntry = entries[0];
+
+        if (firstEntry.isIntersecting && hasMore) {
+            HANDLE.loadMore();
+        }
+    };
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            onIntersection(entries);
+        });
+
+        if (observer && loadMoreRef.current) {
+            observer.observe(loadMoreRef.current);
+        }
+
+        return () => {
+            if (observer) {
+                observer.disconnect();
+            }
+        };
+    }, [songs]);
+
+    const HANDLE = {
+        loadMore: async () => {
+            try {
+                const res = await axios.get(
+                    `${process.env.API_URL}/song/get-songs?page=${page}&limit=4&type=sadness`
+                );
+                if (res?.data?.data?.length === 0) {
+                    setHasMore(false);
+                }
+
+                setPage((prev) => prev + 1);
+                setSongs((prev) => [...prev, ...res?.data?.data]);
+            } catch (error) {
+                setHasMore(false);
+            }
+        },
+    };
+
     return (
-        <div className={styles.wrapperChill}>
-            <h3>Melancholic music</h3>
+        <div className={styles.wrapperAll}>
+            <h3>Find your songs</h3>
+            {/* {songs && songs?.length > 0 ? ( */}
             <div className='content'>
-                {data.map((item) => {
+                {songs?.map((item, index) => {
                     return (
                         <Link
                             href={`/watch/${item.slug}`}
-                            key={item._id}
+                            key={index}
                             className='item'>
                             <Image
                                 src={item.song_thumbnail}
@@ -28,17 +79,83 @@ const MelancholicPage = ({ data }) => {
                                     {item.name}
                                 </div>
                                 <div className='item-info-auth'>
-                                    {item.asrtist}
+                                    {item.artist}
                                 </div>
                             </div>
                         </Link>
                     );
                 })}
+
+                {hasMore && (
+                    <div
+                        ref={loadMoreRef}
+                        className='load-more'
+                        style={{
+                            width: '100%',
+                            display: 'flex',
+                            gap: '1rem',
+                        }}>
+                        <div className='item'>
+                            <Skeleton
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                            />
+                        </div>
+                        <div className='item'>
+                            <Skeleton
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                            />
+                        </div>
+                        <div className='item'>
+                            <Skeleton
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                            />
+                        </div>
+                        <div className='item'>
+                            <Skeleton
+                                style={{
+                                    width: '100%',
+                                    height: '100%',
+                                }}
+                            />
+                        </div>
+                    </div>
+                )}
             </div>
+            {/* ) : (
+                <div
+                    className='content'
+                    style={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}>
+                    <Image
+                        style={{
+                            width: '50%',
+                            height: '50%',
+                        }}
+                        src={
+                            'https://jungjung261.blob.core.windows.net/nextjs-project/jmusic/404.png'
+                        }
+                        alt='Not found'
+                        width='0'
+                        height='0'
+                        sizes='100vw'
+                        priority
+                    />
+                </div>
+            )} */}
         </div>
     );
 };
-
-MelancholicPage.displayName = 'MelancholicPage';
 
 export default MelancholicPage;

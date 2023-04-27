@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import styles from './all.module.scss';
 
-const MelancholicPage = () => {
+const AllPage = () => {
     const [songs, setSongs] = useState([]);
     const [page, setPage] = useState(1);
     const [hasMore, setHasMore] = useState(true);
@@ -41,7 +41,7 @@ const MelancholicPage = () => {
         loadMore: async () => {
             try {
                 const res = await axios.get(
-                    `${process.env.API_URL}/song/get-songs?page=${page}&limit=4&type=study`
+                    `${process.env.API_URL}/song/get-songs?page=${page}&limit=4`
                 );
                 if (res?.data?.data?.length === 0) {
                     setHasMore(false);
@@ -57,7 +57,7 @@ const MelancholicPage = () => {
 
     return (
         <div className={styles.wrapperAll}>
-            <h3>Study songs</h3>
+            <h3>Find your songs</h3>
             {/* {songs && songs?.length > 0 ? ( */}
             <div className='content'>
                 {songs?.map((item, index) => {
@@ -158,4 +158,4 @@ const MelancholicPage = () => {
     );
 };
 
-export default MelancholicPage;
+export default AllPage;

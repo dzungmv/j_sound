@@ -1,4 +1,4 @@
-.wrapperChill {
+.wrapperAll {
     width: 100%;
 
     :global h3 {
@@ -77,6 +77,15 @@
                 width: calc(100% / 2 - 18px);
             }
         }
+
+        :global .load-more {
+            .item {
+                &:nth-child(3),
+                &:nth-child(4) {
+                    display: none;
+                }
+            }
+        }
     }
 
     @media screen and (max-width: 600px) {
@@ -88,6 +97,16 @@
 
                 &-info {
                     display: block;
+                }
+            }
+        }
+
+        :global .load-more {
+            .item {
+                &:nth-child(2),
+                &:nth-child(3),
+                &:nth-child(4) {
+                    display: none;
                 }
             }
         }

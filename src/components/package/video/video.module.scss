@@ -3,63 +3,45 @@
 .wrapperVideo {
     width: 100%;
     background: linear-gradient(to bottom, #ebc0fd 0%, #d9ded8 100%);
-    // position: relative;
 
-    // :global .fullscreen {
-    //     .btn-exit {
-    //         display: none;
-    //     }
-    // }
+    :global .thumbnail {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        // z-index: -1;
 
-    :global .fullscreen-enabled {
-        .video-container {
-            img {
-                height: 100vh;
-            }
-            .video {
-                margin-top: 0;
-                max-width: none;
-                // width: 100%;
-                width: 93%;
-            }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
+    }
 
-        .video-container {
-            img {
-                filter: blur(30px) !important;
-            }
-        }
+    :global .main-page {
+        backdrop-filter: blur(200px);
 
-        .exit-btn {
-            display: flex !important;
+        .main-screen {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
     :global .video-container {
         width: 100%;
-        // height: 471px;
-        position: relative;
-        margin-bottom: 150px;
-
-        img {
-            width: 100%;
-            height: 500px;
-            filter: blur(10px);
-        }
 
         .video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             width: 65%;
             max-width: 980px;
             width: 100%;
             overflow: hidden;
             margin: 0 auto;
             border-radius: 16px;
-            margin-top: 90px;
-            padding: 32px;
+            // padding: 32px;
             // z-index: 100;
 
             iframe {
@@ -126,63 +108,40 @@
                 }
             }
         }
+    }
 
-        .exit-btn {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            border: 1px solid transparent;
-            background-color: var.$primary_color;
-            color: #fff;
-            position: absolute;
-            bottom: 16px;
-            right: 16px;
-            transition: all 0.3s ease-in-out;
-            animation: circle 1.5s ease 1;
+    :global .scroll-animation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+        position: absolute;
+        bottom: 20px;
+
+        .circle {
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s ease;
 
             &:hover {
                 cursor: pointer;
-                background-color: #fff;
-                border: 1px solid var.$primary_color;
-                color: var.$primary_color;
+                scale: 1.1;
             }
-        }
-    }
 
-    :global .btn-fullscreen {
-        position: fixed;
-        bottom: 40px;
-        right: 50px;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        border: 1px solid transparent;
-        background-color: var.$primary_color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease-in-out;
-        animation: circle 1.5s ease 1;
-        animation-delay: 3s;
-
-        i {
-            font-size: 20px;
-            color: #fff;
-            animation: zoom-in-zoom-out 1.5s ease 5;
-            // transition smooth
-            transition: all 0.3s ease-in-out;
-            animation-delay: 3.1s;
-        }
-
-        &:hover {
-            cursor: pointer;
-            background-color: #fff;
-            border: 1px solid var.$primary_color;
             i {
-                color: var.$primary_color;
+                margin: -7px;
+                font-size: 25px;
+                animation: flashing 1s ease infinite alternate;
+                color: white;
+
+                &:nth-child(2) {
+                    animation-delay: 0.3s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: 0.6s;
+                }
             }
         }
     }
@@ -193,6 +152,7 @@
         margin: 0 auto;
         display: flex;
         gap: 0 20px;
+        margin-top: 32px;
 
         &-left {
             width: 30%;
@@ -316,32 +276,26 @@
     }
 
     @media screen and (max-width: 600px) {
-        :global .btn-fullscreen {
-            display: none;
-        }
-
-        :global .video-container {
-            margin-bottom: 0;
-            img {
-                height: 0;
+        :global .main-page {
+            .main-screen {
+                height: auto;
             }
-
+        }
+        :global .video-container {
+            padding-top: 64px;
             .video {
                 width: 100%;
                 border-radius: 0;
                 padding: 0;
-                // margin-top: 76px;
-                position: unset;
-                transform: translate(0);
 
                 iframe {
                     border-radius: 0;
                 }
-
-                .video-not-found {
-                    border-radius: 0;
-                }
             }
+        }
+
+        :global .scroll-animation {
+            display: none;
         }
 
         :global .content {
@@ -394,21 +348,10 @@
     }
 
     @media screen and (min-width: 600px) and (max-width: 1023.8px) {
-        :global .fullscreen-enabled {
-            .video-container {
-                .video {
-                    width: 95%;
-                }
-            }
-        }
         :global .video-container {
-            margin-bottom: 190px;
-            img {
-                height: 380px;
-            }
             .video {
                 width: 100%;
-                margin-top: 120px;
+
                 padding: 16px;
             }
         }
@@ -419,21 +362,12 @@
         }
     }
 
-    @media screen and (min-width: 1024px) and (max-width: 1200px) {
-        :global .fullscreen-enabled {
-            .video-container {
-                .video {
-                    width: 93%;
-                }
+    @media screen and (min-width: 1024px) {
+        :global .video-container {
+            .video {
+                width: 70%;
+                max-width: none;
             }
         }
     }
-
-    // @media screen and (min-width: 2560px) {
-    //     :global .video-container {
-    //         .video {
-    //             width: 35%;
-    //         }
-    //     }
-    // }
 }

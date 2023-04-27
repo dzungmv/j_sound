@@ -6,9 +6,9 @@ export const metadata = {
 };
 
 export default async function Home() {
-    const res = await fetch(`${process.env.API_URL}/song/all-songs`, {
-        cache: 'no-cache',
-    });
+    const res = await fetch(
+        `${process.env.API_URL}/song/get-songs?page=1&limit=4`
+    );
     const data = await res.json();
 
     return (

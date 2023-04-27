@@ -45,24 +45,30 @@ const tabs = [
     },
     {
         id: 2,
+        name: 'All',
+        icon: 'fa-solid fa-music',
+        path: '/all',
+    },
+    {
+        id: 3,
         name: 'Lofi',
         icon: 'fa-solid fa-headphones',
         path: '/lofi',
     },
     {
-        id: 3,
+        id: 4,
         name: 'Chill',
         icon: 'fa-solid fa-moon-cloud',
         path: '/chill',
     },
     {
-        id: 4,
+        id: 5,
         name: 'Melancholic',
         icon: 'fa-solid fa-umbrella',
         path: '/melancholic',
     },
     {
-        id: 5,
+        id: 6,
         name: 'Study',
         icon: 'fa-solid fa-book-heart',
         path: '/study',
