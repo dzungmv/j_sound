@@ -165,6 +165,24 @@
 
     @media screen and (max-width: 600px) {
         :global .slide-user {
+            margin-bottom: 32px;
+
+            .header {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                z-index: 1;
+                top: 32px;
+                flex-direction: column;
+
+                .btn {
+                    margin-top: 16px;
+                }
+            }
+        }
+        :global .slide-user {
             .header {
                 position: static;
             }
