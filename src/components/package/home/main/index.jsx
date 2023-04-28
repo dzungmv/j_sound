@@ -24,7 +24,7 @@ const MainPage = (data) => {
                                 direction='left'
                                 cascade
                                 duration={100}>
-                                Wellcome to Jsound!
+                                Welcome to Jsound!
                             </Zoom>{' '}
                             <br />
                             <Zoom
