@@ -63,7 +63,7 @@ const MelancholicPage = () => {
                 {songs?.map((item, index) => {
                     return (
                         <Link
-                            href={`/watch/${item.slug}`}
+                            href={`/melancholic/${item.slug}`}
                             key={index}
                             className='item'>
                             <Image

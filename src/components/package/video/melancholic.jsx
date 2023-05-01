@@ -14,7 +14,7 @@ const itimFont = Itim({
     subsets: ['vietnamese', 'latin'],
 });
 
-const Video = ({ song }) => {
+const MelancholicVideo = ({ song }) => {
     const router = useRouter();
     const isVideoPlaying = [];
     const anotherVideo = [];
@@ -65,7 +65,7 @@ const Video = ({ song }) => {
         loadMore: async () => {
             try {
                 const res = await axios.get(
-                    `${process.env.API_URL}/song/get-songs?page=${page}&limit=5`
+                    `${process.env.API_URL}/song/get-songs?page=${page}&limit=5&type=sadness`
                 );
 
                 if (res?.data?.data?.length === 0) {
@@ -179,7 +179,9 @@ const Video = ({ song }) => {
                                         }
                                         key={item._id}
                                         onClick={() => {
-                                            router.push(`/watch/${item.slug}`);
+                                            router.push(
+                                                `/melancholic/${item.slug}`
+                                            );
                                         }}>
                                         <div className='item-img'>
                                             <Image
@@ -243,6 +245,6 @@ const Video = ({ song }) => {
     );
 };
 
-Video.displayName = 'Video';
+MelancholicVideo.displayName = 'MelancholicVideo';
 
-export default Video;
+export default MelancholicVideo;

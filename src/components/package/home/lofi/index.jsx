@@ -63,7 +63,7 @@ const LofiPage = () => {
                 {songs?.map((item, index) => {
                     return (
                         <Link
-                            href={`/watch/${item.slug}`}
+                            href={`/lofi/${item.slug}`}
                             key={index}
                             className='item'>
                             <Image

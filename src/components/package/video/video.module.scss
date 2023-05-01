@@ -275,11 +275,6 @@
     }
 
     @media screen and (max-width: 600px) {
-        :global .main-page {
-            .main-screen {
-                height: auto;
-            }
-        }
         :global .video-container {
             padding-top: 64px;
             .video {
@@ -291,10 +286,6 @@
                     border-radius: 0;
                 }
             }
-        }
-
-        :global .scroll-animation {
-            display: none;
         }
 
         :global .content {
@@ -336,7 +327,7 @@
                 border-radius: 0;
 
                 .item-img {
-                    width: 170px;
+                    width: 10px;
                 }
 
                 .item-info {

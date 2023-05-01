@@ -63,7 +63,7 @@ const ChillPage = () => {
                 {songs?.map((item, index) => {
                     return (
                         <Link
-                            href={`/watch/${item.slug}`}
+                            href={`/chill/${item.slug}`}
                             key={index}
                             className='item'>
                             <Image

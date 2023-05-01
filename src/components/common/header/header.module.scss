@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     z-index: 100;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(8px);
 
     :global .header-logo {
         width: 30%;
