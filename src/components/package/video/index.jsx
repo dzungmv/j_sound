@@ -79,6 +79,10 @@ const Video = ({ song }) => {
                 setHasMore(false);
             }
         },
+
+        playNextVideo: (id) => {
+            router.push(`/video/${id}`);
+        },
     };
 
     return (

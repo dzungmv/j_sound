@@ -40,6 +40,11 @@
 
     @media screen and (max-width: 600px) {
         :global .sidebar {
+            // position: fixed;
+            // bottom: 0;
+            background-color: white;
+            // left: 0;
+            // right: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -48,6 +53,7 @@
                 span {
                     display: none;
                 }
+                border-radius: 0;
             }
         }
     }

@@ -80,6 +80,50 @@ const SearchComp = () => {
                         <div className='loading-sleketon'>
                             <Skeleton count={4} />
                         </div>
+                    ) : searchResult && searchResult.length > 0 ? (
+                        searchResult.map((item, index) => {
+                            return (
+                                index < 8 && (
+                                    <Link
+                                        key={item._id}
+                                        href={`/watch/${item.slug}`}
+                                        passHref>
+                                        <div className='search-box-item'>
+                                            <div className='search-box-item-image'>
+                                                <Image
+                                                    src={item.artist_avatar}
+                                                    alt='search'
+                                                    width='0'
+                                                    height='0'
+                                                    sizes='100vw'
+                                                />
+                                            </div>
+                                            <div className='search-box-item-info'>
+                                                <div className='info-name'>
+                                                    {item.name}
+                                                </div>
+                                                <span>{item.artist}</span>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                )
+                            );
+                        })
+                    ) : (
+                        <p className='types-search'>
+                            Not found any song with search value {` `}
+                            <strong>{searchValue}</strong>
+                        </p>
+                    )}
+                </div>
+            )}
+
+            {/* {searchValue && searchValue.length > 0 && (
+                <div className='search-box'>
+                    {isPending ? (
+                        <div className='loading-sleketon'>
+                            <Skeleton count={4} />
+                        </div>
                     ) : error ? (
                         <p className='types-search'>
                             Not found any song with search value {` `}
@@ -118,7 +162,7 @@ const SearchComp = () => {
                         <p>No recent searches</p>
                     )}
                 </div>
-            )}
+            )} */}
         </section>
     );
 };
